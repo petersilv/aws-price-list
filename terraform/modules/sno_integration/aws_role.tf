@@ -4,7 +4,7 @@
 
 resource "aws_iam_role" "role" {
 
-  name               = "${var.application_short}-role"
+  name               = "${var.application_one_word}-role"
   description        = "Allow Snowflake to access ${var.application} S3 bucket"
   tags               = var.common_tags
   assume_role_policy = data.aws_iam_policy_document.assume_policy.json
@@ -13,7 +13,7 @@ resource "aws_iam_role" "role" {
 
 resource "aws_iam_policy" "policy" {
 
-  name        = "${var.application_short}-policy"
+  name        = "${var.application_one_word}-policy"
   description = "Provide read access to ${var.application} S3 bucket"
   tags        = var.common_tags
   policy      = data.aws_iam_policy_document.policy.json

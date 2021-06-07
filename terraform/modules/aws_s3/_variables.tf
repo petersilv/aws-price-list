@@ -5,7 +5,7 @@ variable "application" {
   type = string
 }
 
-variable "application_short" {
+variable "application_one_word" {
   type = string
 }
 

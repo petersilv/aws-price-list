@@ -4,7 +4,7 @@
 locals {
 
   application = "aws-price-list"
-  application_short = "awspricelist"
+  application_one_word = "awspricelist"
 
   common_tags = {
     created_by  = "Terraform"
