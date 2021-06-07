@@ -28,9 +28,9 @@ provider "snowflake" {
 module "aws_s3" {
   source = "./modules/aws_s3"
 
-  application = local.application
+  application       = local.application
   application_short = local.application_short
-  common_tags = local.common_tags
+  common_tags       = local.common_tags
 
 }
 
@@ -38,10 +38,27 @@ module "aws_s3" {
 module "aws_lambda" {
   source = "./modules/aws_lambda"
 
-  application = local.application
+  application       = local.application
   application_short = local.application_short
-  common_tags = local.common_tags
+  common_tags       = local.common_tags
 
+  aws_s3_bucket_id  = module.aws_s3.aws_s3_bucket_id
+  aws_s3_bucket_arn = module.aws_s3.aws_s3_bucket_arn
+
+}
+
+# ----------------------------------------------------------------------------------------------------------------------
+module "sno_integration" {
+  source = "./modules/sno_integration"
+
+  application       = local.application
+  application_short = local.application_short
+  common_tags       = local.common_tags
+
+  snowflake_database = "DEMO_DB"
+  snowflake_schema   = "PUBLIC"
+
+  aws_account_id    = local.aws_account_id
   aws_s3_bucket_id  = module.aws_s3.aws_s3_bucket_id
   aws_s3_bucket_arn = module.aws_s3.aws_s3_bucket_arn
 
