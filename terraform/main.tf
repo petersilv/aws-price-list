@@ -29,6 +29,7 @@ module "aws_s3" {
   source = "./modules/aws_s3"
 
   application = local.application
+  application_short = local.application_short
   common_tags = local.common_tags
 
 }
@@ -38,6 +39,7 @@ module "aws_lambda" {
   source = "./modules/aws_lambda"
 
   application = local.application
+  application_short = local.application_short
   common_tags = local.common_tags
 
   aws_s3_bucket_id  = module.aws_s3.aws_s3_bucket_id

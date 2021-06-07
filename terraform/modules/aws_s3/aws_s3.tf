@@ -3,7 +3,7 @@
 
 resource "aws_s3_bucket" "s3_bucket" {
 
-  bucket = "psilv-${var.application}"
+  bucket = "psilv-${var.application_short}"
   acl    = "private"
   tags   = var.common_tags
 

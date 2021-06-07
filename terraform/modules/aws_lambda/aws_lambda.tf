@@ -5,7 +5,7 @@ module "lambda_function" {
 
   source = "terraform-aws-modules/lambda/aws"
 
-  function_name = "${var.application}-describe-services"
+  function_name = "${var.application_short}-describeservices"
   description   = "Call the Describe Services Endpoint and write Service List to S3"
   tags          = var.common_tags
   handler       = "describe_services.main"
@@ -39,7 +39,7 @@ module "lambda_function" {
 
 resource "aws_cloudwatch_event_rule" "event" {
 
-  name                = "${var.application}-event-rule"
+  name                = "${var.application_short}-event-rule"
   description         = "Run at 6pm UTC every Sunday"
   schedule_expression = "cron(0 18 ? * SUN *)" 
   tags                = var.common_tags
@@ -59,8 +59,8 @@ resource "aws_cloudwatch_event_target" "lambda" {
 
 resource "aws_iam_role" "lambda_role" {
 
-  name               = "${var.application}-lambda-role"
-  description        = "Allow Lambda function access to ${var.application} S3 bucket"
+  name               = "${var.application_short}-lambda-role"
+  description        = "Allow Lambda function access to ${var.application_short} S3 bucket"
   tags               = var.common_tags
   assume_role_policy = data.aws_iam_policy_document.lambda_assume_policy.json
 
@@ -68,8 +68,8 @@ resource "aws_iam_role" "lambda_role" {
 
 resource "aws_iam_policy" "lambda_policy" {
 
-  name        = "${var.application}-lambda-policy"
-  description = "Provide write access to ${var.application} S3 bucket"
+  name        = "${var.application_short}-lambda-policy"
+  description = "Provide write access to ${var.application_short} S3 bucket"
   tags        = var.common_tags
   policy      = data.aws_iam_policy_document.lambda_policy.json
 
