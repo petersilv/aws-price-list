@@ -6,8 +6,9 @@ locals {
   application = "aws-price-list"
 
   common_tags = {
-    created_by  = "terraform"
+    created_by  = "Terraform"
     application = local.application
+    owner       = "Peter Silvester" 
   }
 
 }

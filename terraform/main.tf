@@ -1,7 +1,7 @@
 # ----------------------------------------------------------------------------------------------------------------------
 terraform {
 
-  required_version = ">= 0.15.1"
+  required_version = ">= 0.15.5"
   required_providers {
     aws = {
       source  = "hashicorp/aws"
@@ -22,4 +22,13 @@ provider "aws" {
 
 provider "snowflake" {
   role = "SYSADMIN"
+}
+
+# ----------------------------------------------------------------------------------------------------------------------
+module "aws_s3" {
+  source = "./modules/aws_s3"
+
+  application = local.application
+  common_tags = local.common_tags
+
 }
