@@ -12,6 +12,10 @@ locals {
     owner       = "Peter Silvester" 
   }
 
+  snowflake_warehouse   = "COMPUTE_WH"
+  snowflake_database    = "DEMO_DB"
+  snowflake_schema      = "PUBLIC"
+
 }
 
 # ----------------------------------------------------------------------------------------------------------------------
