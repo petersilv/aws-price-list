@@ -26,7 +26,6 @@ logging.basicConfig(
 
 S3_BUCKET = os.environ['S3_BUCKET']
 S3_PREFIX = os.environ['S3_PREFIX']
-SNS_TOPIC = os.environ['SNS_TOPIC']
 
 # ----------------------------------------------------------------------------------------------------------------------
 # Lambda Function
@@ -35,62 +34,74 @@ SNS_TOPIC = os.environ['SNS_TOPIC']
 
 def main(event, context):
 
+    service = json.loads(event['Records'][0]['Sns']['Message'])
+
     # ------------------------------------------------------------------------------------------------------------------
-    # Call Describe Services Endpoint from Boto3
+    # Call Get Attribute Values Endpoint from Boto3
+
+    service_code = service['ServiceCode']
+    attributes_list = []
 
     pricing_client = boto3.client('pricing', region_name='us-east-1')
 
-    paginator = pricing_client.get_paginator('describe_services')
+    paginator = pricing_client.get_paginator('get_attribute_values')
 
-    response_iterator = paginator.paginate()
+    for attribute_name in service['AttributeNames']:
 
-    service_list = []
-    response_metadata_list = []
-
-    for page in response_iterator:
-        service_list += page['Services']
-        response_metadata_list.append(page['ResponseMetadata'])
-
-    logging.info('Boto3 ResponseMetadata: %s', response_metadata_list)
-
-    # ------------------------------------------------------------------------------------------------------------------
-    # Send to SNS
-
-    sns_client = boto3.client('sns', region_name='eu-west-2')
-
-    for service in service_list:
-
-        sns_response = sns_client.publish(
-            TopicArn=SNS_TOPIC, 
-            Message=json.dumps(service)
+        response_iterator = paginator.paginate(
+            ServiceCode=service_code,
+            AttributeName=attribute_name
         )
 
-        # logging.info('SNS Response: %s', sns_response)
+        attr_value_list = []
+        response_metadata_list = []
+
+        for page in response_iterator:
+
+            attr_value_list += page['AttributeValues']
+            response_metadata_list.append(page['ResponseMetadata'])
+
+        logging.info(
+            'Boto3 - ServiceCode: %s, AttributeName: %s, ResponseMetadata: %s', 
+            service_code,
+            attribute_name, 
+            response_metadata_list
+        )
+
+        attributes_list.append(
+            {
+                'ServiceCode': service_code,
+                'AttributeName': attribute_name,
+                'AttributeValues': attr_value_list
+            }
+        )
+
 
     # ------------------------------------------------------------------------------------------------------------------
     # Save to S3
 
-    service_list_json = json.dumps(
-        service_list,
+    attributes_list_json = json.dumps(
+        attributes_list,
         indent=4,
         ensure_ascii=False
     )
 
     s3_client = boto3.client('s3')
 
+    prefix = f"{S3_PREFIX}{service_code}/"
     filename = f"{dt.datetime.now().strftime('%Y-%m-%d')}.json"
 
     logging.info('S3 - Bucket: %s', S3_BUCKET)
-    logging.info('S3 - Prefix: %s', S3_PREFIX)
+    logging.info('S3 - Prefix: %s', prefix)
     logging.info('S3 - File Name: %s', filename)
 
     s3_response = s3_client.put_object(
-        Body=service_list_json,
+        Body=attributes_list_json,
         Bucket=S3_BUCKET,
-        Key=f'{S3_PREFIX}{filename}',
+        Key=f'{prefix}{filename}',
     )
 
     s3_status_code = s3_response['ResponseMetadata']['HTTPStatusCode']
     logging.info('S3 - Status Code: %s', s3_status_code)
 
-    return service_list
+    return attributes_list
