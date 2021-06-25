@@ -23,7 +23,7 @@ variable "table_name" {
   type = string
 }
 
-variable "sql_filepath" {
+variable "stage_folder" {
   type = string
 }
 

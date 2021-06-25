@@ -65,19 +65,36 @@ module "sno_integration" {
 }
 
 # ----------------------------------------------------------------------------------------------------------------------
-module "sno_pipe_services" {
+module "sno_pipe_describeservices" {
   source = "./modules/sno_pipe"
 
   application          = local.application
   application_one_word = local.application_one_word
 
-  snowflake_warehouse   = local.snowflake_warehouse
   snowflake_database    = local.snowflake_database
   snowflake_schema      = local.snowflake_schema
   snowflake_stage       = module.sno_integration.snowflake_stage
 
+  stage_folder = "describeservices"
   table_name   = "DESCRIBESERVICES"
-  sql_filepath = "../sql/pipe_services.sql"
+
+  aws_s3_bucket_id = module.aws_s3.aws_s3_bucket_id
+
+}
+
+# ----------------------------------------------------------------------------------------------------------------------
+module "sno_pipe_getattributevalues" {
+  source = "./modules/sno_pipe"
+
+  application          = local.application
+  application_one_word = local.application_one_word
+
+  snowflake_database    = local.snowflake_database
+  snowflake_schema      = local.snowflake_schema
+  snowflake_stage       = module.sno_integration.snowflake_stage
+
+  stage_folder = "getattributevalues"
+  table_name   = "GETATTRIBUTEVALUES"
 
   aws_s3_bucket_id = module.aws_s3.aws_s3_bucket_id
 

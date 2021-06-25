@@ -9,7 +9,7 @@ copy into ${database}.${schema}.${table}
          , current_timestamp::timestamp_tz
 
       from 
-           @${database}.${schema}.${stage}/describeservices
+           @${database}.${schema}.${stage}/${stage_folder}
   )
   file_format = (type=json)
   on_error= skip_file

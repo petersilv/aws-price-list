@@ -14,12 +14,3 @@ terraform {
   }
 
 }
-
-provider "aws" {
-  profile = "terraform"
-  region  = "eu-west-2"
-}
-
-provider "snowflake" {
-  role = "SYSADMIN"
-}

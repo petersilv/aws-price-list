@@ -5,7 +5,7 @@ resource "snowflake_table" "json_table" {
 
   database = var.snowflake_database
   schema   = var.snowflake_schema
-  name     = "${local.snowflake_application}_JSON_${upper(var.table_name)}"
+  name     = "${local.snowflake_application}_JSON_${local.snowflake_table}"
 
   column {
     name = "RECORDS"
@@ -49,16 +49,17 @@ resource "snowflake_pipe" "pipe" {
 
   database    = var.snowflake_database
   schema      = var.snowflake_schema
-  name        = "PIPE_${upper(var.table_name)}"
+  name        = "PIPE_${local.snowflake_table}"
   auto_ingest = true
 
   copy_statement = templatefile(
-    var.sql_filepath,
+    "../sql/pipe.sql",
     {
-      database: var.snowflake_database
-      schema:   var.snowflake_schema
-      table:    snowflake_table.json_table.name,
-      stage:    time_sleep.policy_attach.triggers["stage"]
+      database:     var.snowflake_database
+      schema:       var.snowflake_schema
+      table:        snowflake_table.json_table.name,
+      stage:        time_sleep.policy_attach.triggers["stage"]
+      stage_folder: var.stage_folder
     }
   )
 
