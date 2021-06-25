@@ -99,3 +99,15 @@ module "sno_pipe_getattributevalues" {
   aws_s3_bucket_id = module.aws_s3.aws_s3_bucket_id
 
 }
+
+module "sno_transform" {
+  source = "./modules/sno_transform"
+
+  application          = local.application
+  application_one_word = local.application_one_word
+
+  snowflake_warehouse = local.snowflake_warehouse
+  snowflake_database  = local.snowflake_database
+  snowflake_schema    = local.snowflake_schema
+
+}
