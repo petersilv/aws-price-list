@@ -57,7 +57,7 @@ resource "snowflake_pipe" "pipe" {
     {
       database:     var.snowflake_database
       schema:       var.snowflake_schema
-      table:        snowflake_table.json_table.name,
+      table:        snowflake_table.json_table.name
       stage:        time_sleep.policy_attach.triggers["stage"]
       stage_folder: var.stage_folder
     }
