@@ -6,6 +6,7 @@ import logging
 import json
 import os
 import boto3
+from botocore.config import Config
 
 # ----------------------------------------------------------------------------------------------------------------------
 # Logging Setup
@@ -19,6 +20,16 @@ if root.handlers:
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s'
+)
+
+# ----------------------------------------------------------------------------------------------------------------------
+# Boto3 Config Setup
+
+CONFIG = Config(
+   retries = {
+      'max_attempts': 10,
+      'mode': 'standard'
+   }
 )
 
 # ----------------------------------------------------------------------------------------------------------------------
@@ -38,7 +49,7 @@ def main(event, context):
     # ------------------------------------------------------------------------------------------------------------------
     # Call Describe Services Endpoint from Boto3
 
-    pricing_client = boto3.client('pricing', region_name='us-east-1')
+    pricing_client = boto3.client('pricing', region_name='us-east-1', config=CONFIG)
 
     paginator = pricing_client.get_paginator('describe_services')
 

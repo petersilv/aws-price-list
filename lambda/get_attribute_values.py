@@ -6,6 +6,7 @@ import logging
 import json
 import os
 import boto3
+from botocore.config import Config
 
 # ----------------------------------------------------------------------------------------------------------------------
 # Logging Setup
@@ -20,6 +21,17 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
+
+# ----------------------------------------------------------------------------------------------------------------------
+# Boto3 Config Setup
+
+CONFIG = Config(
+   retries = {
+      'max_attempts': 10,
+      'mode': 'standard'
+   }
+)
+
 
 # ----------------------------------------------------------------------------------------------------------------------
 # Set Variables
@@ -42,7 +54,7 @@ def main(event, context):
     service_code = service['ServiceCode']
     attributes_list = []
 
-    pricing_client = boto3.client('pricing', region_name='us-east-1')
+    pricing_client = boto3.client('pricing', region_name='us-east-1', config=CONFIG)
 
     paginator = pricing_client.get_paginator('get_attribute_values')
 
