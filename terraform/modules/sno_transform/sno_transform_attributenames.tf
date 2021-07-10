@@ -8,12 +8,12 @@ resource "snowflake_table" "table_attributenames" {
   name     = "${local.snowflake_application}_ATTRIBUTENAMES"
 
   column {
-    name = "SERVICES"
+    name = "SERVICE_CODE"
     type = "VARCHAR(16777216)"
   }
 
   column {
-    name = "ATTRIBUTENAMES"
+    name = "ATTRIBUTE_NAME"
     type = "VARCHAR(16777216)"
   }
 
@@ -35,8 +35,8 @@ resource "snowflake_task" "task_attributenames" {
     {
       database:   var.snowflake_database
       schema:     var.snowflake_schema
-      table:      snowflake_table.table_services.name
-      json_table: "${local.snowflake_application}_JSON_GETATTRIBUTENAMES"
+      table:      snowflake_table.table_attributenames.name
+      json_table: "${local.snowflake_application}_JSON_DESCRIBESERVICES"
     }
   )
   
