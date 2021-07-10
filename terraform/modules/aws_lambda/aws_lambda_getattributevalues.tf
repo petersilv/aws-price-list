@@ -10,8 +10,8 @@ module "lambda_function_getattributevalues" {
   tags          = var.common_tags
   handler       = "get_attribute_values.main"
   runtime       = "python3.7"
-  memory_size   = 512
-  timeout       = 60
+  memory_size   = 1024
+  timeout       = 600
   publish       = true
   
   reserved_concurrent_executions = 2
