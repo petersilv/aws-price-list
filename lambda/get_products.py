@@ -66,29 +66,65 @@ def main(event, context):
             product_list.append(json.loads(item))
 
     # ------------------------------------------------------------------------------------------------------------------
+    # Split large files
+
+    output_list = []
+
+    if message['instance_flag'] == 1:
+
+        inst_type_list = set([
+        x['product']['attributes']['instanceType']
+        for x in product_list
+        ])
+
+        for i in inst_type_list:
+            output = {
+                'dir_name': f"{i}/",
+                'data': [
+                    p 
+                    for p in product_list
+                    if p['product']['attributes']['instanceType'] == i
+                ]
+            }
+
+            output_list.append(output)
+
+    else:
+
+        output = {
+            'dir_name': '',
+            'data': product_list
+        }
+
+        output_list.append(output)
+
+
+    # ------------------------------------------------------------------------------------------------------------------
     # Save to S3
 
-    product_list_json = json.dumps(
-        product_list,
-        indent=4,
-        ensure_ascii=False
-    )
+    for output in output_list:
 
-    s3_client = boto3.client('s3')
+        json_data = json.dumps(
+            output['data'],
+            indent=4,
+            ensure_ascii=False
+        )
 
-    prefix = f"{S3_PREFIX}{message['filepath']}"
-    filename = f"{dt.datetime.now().strftime('%Y-%m-%d')}.json"
+        s3_client = boto3.client('s3')
 
-    logging.info('S3 - Bucket: %s', S3_BUCKET)
-    logging.info('S3 - Prefix: %s', prefix)
-    logging.info('S3 - File Name: %s', filename)
+        prefix = f"{S3_PREFIX}{message['filepath']}{output['dir_name']}"
+        filename = f"{dt.datetime.now().strftime('%Y-%m-%d')}.json"
 
-    s3_response = s3_client.put_object(
-        Body=product_list_json,
-        Bucket=S3_BUCKET,
-        Key=f'{prefix}{filename}',
-    )
+        logging.info('S3 - Bucket: %s', S3_BUCKET)
+        logging.info('S3 - Prefix: %s', prefix)
+        logging.info('S3 - File Name: %s', filename)
 
-    s3_status_code = s3_response['ResponseMetadata']['HTTPStatusCode']
-    logging.info('S3 - Status Code: %s', s3_status_code)
+        s3_response = s3_client.put_object(
+            Body=json_data,
+            Bucket=S3_BUCKET,
+            Key=f'{prefix}{filename}',
+        )
+
+        s3_status_code = s3_response['ResponseMetadata']['HTTPStatusCode']
+        logging.info('S3 - Status Code: %s', s3_status_code)
 

@@ -55,9 +55,9 @@ def main(event, context):
 
     product_list = []
 
-    for prd in lookup['ProductFilters']:
+    for prd in lookup_dict['ProductFilters']:
 
-        filters = {**prd, **lookup['LocationFilters']}
+        filters = {**prd, **lookup_dict['LocationFilters']}
 
         filters_as_lists = {
             k: [v] if not isinstance(v, list) else v
@@ -89,7 +89,7 @@ def main(event, context):
             ]
         }
 
-        filepath_keys = ['location', 'servicecode', 'productFamily', 'instanceFamily',  'capacitystatus']
+        filepath_keys = ['location', 'servicecode', 'productFamily']
         filepath = ''
 
         for fp_key in filepath_keys:
@@ -97,7 +97,17 @@ def main(event, context):
                 if key == fp_key:
                     filepath += re.sub(r'[\(\)\s-]', '', f"{value}/")
 
-        message_list.append({'params': params, 'filepath': filepath})
+        instance_flag = 0
+
+        for key, value in product.items():
+            if key == 'productFamily' and value == 'Compute Instance':
+                instance_flag = 1
+
+        message_list.append({
+            'params': params, 
+            'filepath': filepath,
+            'instance_flag': instance_flag
+        })
 
     # ------------------------------------------------------------------------------------------------------------------
     # Send to SNS
