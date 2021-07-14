@@ -71,9 +71,9 @@ module "sno_pipe_describeservices" {
   application          = local.application
   application_one_word = local.application_one_word
 
-  snowflake_database    = local.snowflake_database
-  snowflake_schema      = local.snowflake_schema
-  snowflake_stage       = module.sno_integration.snowflake_stage
+  snowflake_database = local.snowflake_database
+  snowflake_schema   = local.snowflake_schema
+  snowflake_stage    = module.sno_integration.snowflake_stage
 
   stage_folder = "describeservices"
   table_name   = "DESCRIBESERVICES"
@@ -89,9 +89,9 @@ module "sno_pipe_getattributevalues" {
   application          = local.application
   application_one_word = local.application_one_word
 
-  snowflake_database    = local.snowflake_database
-  snowflake_schema      = local.snowflake_schema
-  snowflake_stage       = module.sno_integration.snowflake_stage
+  snowflake_database = local.snowflake_database
+  snowflake_schema   = local.snowflake_schema
+  snowflake_stage    = module.sno_integration.snowflake_stage
 
   stage_folder = "getattributevalues"
   table_name   = "GETATTRIBUTEVALUES"
@@ -100,6 +100,25 @@ module "sno_pipe_getattributevalues" {
 
 }
 
+# ----------------------------------------------------------------------------------------------------------------------
+module "sno_pipe_getproducts" {
+  source = "./modules/sno_pipe"
+
+  application          = local.application
+  application_one_word = local.application_one_word
+
+  snowflake_database = local.snowflake_database
+  snowflake_schema   = local.snowflake_schema
+  snowflake_stage    = module.sno_integration.snowflake_stage
+
+  stage_folder = "getproducts"
+  table_name   = "GETPRODUCTS"
+
+  aws_s3_bucket_id = module.aws_s3.aws_s3_bucket_id
+
+}
+
+# ----------------------------------------------------------------------------------------------------------------------
 module "sno_transform" {
   source = "./modules/sno_transform"
 

@@ -1,0 +1,43 @@
+{
+  "LocationFilters": {
+    "locationType": "AWS Region",
+    "location": [
+      "EU (Stockholm)",
+      "EU (Paris)",
+      "EU (Milan)",
+      "EU (London)",
+      "EU (Ireland)",
+      "EU (Frankfurt)"
+    ]
+  },
+  "ProductFilters": [
+    {
+      "servicecode": "AmazonEC2",
+      "productFamily": "Compute Instance",
+      "tenancy": "Shared",
+      "instanceFamily": [
+        "General purpose",
+        "Compute optimized",
+        "Memory optimized"
+      ]
+    },
+    {
+      "servicecode": "AmazonEC2",
+      "productFamily": "Storage"
+    },
+    {
+      "servicecode": "AmazonEC2",
+      "productFamily": "NAT Gateway"
+    },
+    {
+      "servicecode": "AWSELB",
+      "productFamily": [
+        "Load Balancer-Application", 
+        "Load Balancer-Network"
+      ]
+    },
+    {
+      "servicecode": "AmazonS3"
+    }
+  ]
+}
