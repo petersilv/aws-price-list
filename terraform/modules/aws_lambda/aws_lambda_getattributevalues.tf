@@ -5,7 +5,7 @@ module "lambda_function_getattributevalues" {
 
   source = "terraform-aws-modules/lambda/aws"
 
-  function_name = "${var.application_one_word}-getattributevalues"
+  function_name = "${var.application_name}-getattributevalues"
   description   = "Call the Get Attribute Values Endpoint and write Attribute Values to S3"
   tags          = var.common_tags
   handler       = "get_attribute_values.main"
@@ -40,7 +40,7 @@ module "lambda_function_getattributevalues" {
 # Lambda Trigger
 
 resource "aws_sns_topic" "getattributevalues" {
-  name = "${var.application_one_word}-getattributevalues"
+  name = "${var.application_name}-getattributevalues"
 }
 
 resource "aws_sns_topic_subscription" "getattributevalues" {

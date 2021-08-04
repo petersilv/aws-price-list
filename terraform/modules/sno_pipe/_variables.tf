@@ -3,19 +3,17 @@
 
 locals {
 
-  snowflake_application = upper(var.application_one_word)
-  snowflake_table       = upper(var.table_name)
+  database = upper(var.snowflake_database)
+  schema   = upper(var.snowflake_schema)
+  table    = upper(var.table_name)
+  s3_prefix = join("", [var.stage_prefix, var.pipe_prefix])
 
 }
 
 # ----------------------------------------------------------------------------------------------------------------------
 # Variables
 
-variable "application" {
-  type = string
-}
-
-variable "application_one_word" {
+variable "application_name" {
   type = string
 }
 
@@ -31,7 +29,11 @@ variable "snowflake_stage" {
   type = string
 }
 
-variable "stage_folder" {
+variable "stage_prefix" {
+  type = string
+}
+
+variable "pipe_prefix" {
   type = string
 }
 

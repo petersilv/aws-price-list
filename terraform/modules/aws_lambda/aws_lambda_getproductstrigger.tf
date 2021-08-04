@@ -5,7 +5,7 @@ module "lambda_function_getproductstrigger" {
 
   source = "terraform-aws-modules/lambda/aws"
 
-  function_name = "${var.application_one_word}-getproductstrigger"
+  function_name = "${var.application_name}-getproductstrigger"
   description   = "Read the Get Products lookup and trigger the Get Products function"
   tags          = var.common_tags
   handler       = "get_products_trigger.main"
@@ -41,7 +41,7 @@ module "lambda_function_getproductstrigger" {
 
 resource "aws_cloudwatch_event_rule" "getproductstrigger" {
 
-  name                = "${var.application_one_word}-event-rule-weekly-getproductstrigger"
+  name                = "${var.application_name}-event-rule-weekly-getproductstrigger"
   description         = "Run at 6pm UTC every Sunday"
   schedule_expression = "cron(0 18 ? * SUN *)" 
   tags                = var.common_tags

@@ -16,21 +16,21 @@ terraform {
 }
 
 provider "aws" {
-  profile = "terraform"
-  region  = "eu-west-2"
+  profile = var.aws_profile
+  region  = var.aws_region
 }
 
 provider "snowflake" {
-  role = "SYSADMIN"
+  role = var.snowflake_role
 }
 
 # ----------------------------------------------------------------------------------------------------------------------
 module "aws_s3" {
   source = "./modules/aws_s3"
 
-  application          = local.application
-  application_one_word = local.application_one_word
-  common_tags          = local.common_tags
+  s3_bucket_unique_identifier = var.s3_bucket_unique_identifier
+  application_name            = var.application_name
+  common_tags                 = local.common_tags
 
 }
 
@@ -38,9 +38,8 @@ module "aws_s3" {
 module "aws_lambda" {
   source = "./modules/aws_lambda"
 
-  application          = local.application
-  application_one_word = local.application_one_word
-  common_tags          = local.common_tags
+  application_name = local.application_name
+  common_tags      = local.common_tags
 
   aws_s3_bucket_id  = module.aws_s3.aws_s3_bucket_id
   aws_s3_bucket_arn = module.aws_s3.aws_s3_bucket_arn
@@ -51,12 +50,12 @@ module "aws_lambda" {
 module "sno_integration" {
   source = "./modules/sno_integration"
 
-  application          = local.application
-  application_one_word = local.application_one_word
-  common_tags          = local.common_tags
+  application_name = var.application_name
+  common_tags      = local.common_tags
 
-  snowflake_database = local.snowflake_database
-  snowflake_schema   = local.snowflake_schema
+  snowflake_database = var.snowflake_database
+  snowflake_schema   = var.snowflake_schema
+  stage_prefix       = var.stage_prefix
 
   aws_account_id    = local.aws_account_id
   aws_s3_bucket_id  = module.aws_s3.aws_s3_bucket_id
@@ -65,55 +64,18 @@ module "sno_integration" {
 }
 
 # ----------------------------------------------------------------------------------------------------------------------
-module "sno_pipe_describeservices" {
+module "sno_pipe" {
   source = "./modules/sno_pipe"
 
-  application          = local.application
-  application_one_word = local.application_one_word
+  application_name = var.application_name
 
-  snowflake_database = local.snowflake_database
-  snowflake_schema   = local.snowflake_schema
+  snowflake_database = var.snowflake_database
+  snowflake_schema   = var.snowflake_schema
   snowflake_stage    = module.sno_integration.snowflake_stage
+  stage_prefix       = var.stage_prefix
+  pipe_prefix        = var.pipe_prefix
+  table_name         = var.table_name
 
-  stage_folder = "describeservices"
-  table_name   = "DESCRIBESERVICES"
-
-  aws_s3_bucket_id = module.aws_s3.aws_s3_bucket_id
-
-}
-
-# ----------------------------------------------------------------------------------------------------------------------
-module "sno_pipe_getattributevalues" {
-  source = "./modules/sno_pipe"
-
-  application          = local.application
-  application_one_word = local.application_one_word
-
-  snowflake_database = local.snowflake_database
-  snowflake_schema   = local.snowflake_schema
-  snowflake_stage    = module.sno_integration.snowflake_stage
-
-  stage_folder = "getattributevalues"
-  table_name   = "GETATTRIBUTEVALUES"
-
-  aws_s3_bucket_id = module.aws_s3.aws_s3_bucket_id
-
-}
-
-# ----------------------------------------------------------------------------------------------------------------------
-module "sno_pipe_getproducts" {
-  source = "./modules/sno_pipe"
-
-  application          = local.application
-  application_one_word = local.application_one_word
-
-  snowflake_database = local.snowflake_database
-  snowflake_schema   = local.snowflake_schema
-  snowflake_stage    = module.sno_integration.snowflake_stage
-
-  stage_folder = "getproducts"
-  table_name   = "GETPRODUCTS"
-
-  aws_s3_bucket_id = module.aws_s3.aws_s3_bucket_id
+  aws_s3_bucket_id  = module.aws_s3.aws_s3_bucket_id
 
 }

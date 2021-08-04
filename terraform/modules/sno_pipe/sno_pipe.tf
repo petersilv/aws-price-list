@@ -3,9 +3,9 @@
 
 resource "snowflake_table" "json_table" {
 
-  database = var.snowflake_database
-  schema   = var.snowflake_schema
-  name     = "${local.snowflake_application}_JSON_${local.snowflake_table}"
+  database = local.database
+  schema   = local.schema
+  name     = local.table
 
   column {
     name = "RECORDS"
@@ -47,19 +47,19 @@ resource "time_sleep" "policy_attach" {
 
 resource "snowflake_pipe" "pipe" {
 
-  database    = var.snowflake_database
-  schema      = var.snowflake_schema
-  name        = "PIPE_${local.snowflake_table}"
+  database    = local.database
+  schema      = local.schema
+  name        = "PIPE_${local.table}"
   auto_ingest = true
 
   copy_statement = templatefile(
-    "../sql/pipe.sql",
+    "./sql/pipe.sql",
     {
-      database:     var.snowflake_database
-      schema:       var.snowflake_schema
-      table:        snowflake_table.json_table.name
-      stage:        time_sleep.policy_attach.triggers["stage"]
-      stage_folder: var.stage_folder
+      database:    local.database
+      schema:      local.schema
+      table:       snowflake_table.json_table.name
+      stage:       time_sleep.policy_attach.triggers["stage"]
+      pipe_prefix: var.pipe_prefix
     }
   )
 
@@ -72,7 +72,9 @@ resource "aws_s3_bucket_notification" "bucket_notification" {
 
   bucket = var.aws_s3_bucket_id
 
-  queue {
+  queue {    
+    id = lower("snowflake-sqs-${local.table}")
+    filter_prefix = local.s3_prefix
     queue_arn = snowflake_pipe.pipe.notification_channel
     events    = ["s3:ObjectCreated:*"]
   }

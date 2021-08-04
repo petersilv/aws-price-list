@@ -3,8 +3,8 @@
 
 resource "aws_iam_role" "lambda_role" {
 
-  name               = "${var.application_one_word}-lambda-role"
-  description        = "Allow Lambda function access to ${var.application_one_word} S3 bucket"
+  name               = "${var.application_name}-lambda-role"
+  description        = "Allow Lambda function access to ${var.application_name} S3 bucket"
   tags               = var.common_tags
   assume_role_policy = data.aws_iam_policy_document.lambda_assume_policy.json
 
@@ -12,8 +12,8 @@ resource "aws_iam_role" "lambda_role" {
 
 resource "aws_iam_policy" "lambda_policy" {
 
-  name        = "${var.application_one_word}-lambda-policy"
-  description = "Provide write access to ${var.application_one_word} S3 bucket"
+  name        = "${var.application_name}-lambda-policy"
+  description = "Provide write access to ${var.application_name} S3 bucket"
   tags        = var.common_tags
   policy      = data.aws_iam_policy_document.lambda_policy.json
 

@@ -5,7 +5,7 @@ module "lambda_function_getproducts" {
 
   source = "terraform-aws-modules/lambda/aws"
 
-  function_name = "${var.application_one_word}-getproducts"
+  function_name = "${var.application_name}-getproducts"
   description   = "Call the Get Products Endpoint and write results to S3"
   tags          = var.common_tags
   handler       = "get_products.main"
@@ -38,7 +38,7 @@ module "lambda_function_getproducts" {
 # Lambda Trigger
 
 resource "aws_sns_topic" "getproducts" {
-  name = "${var.application_one_word}-getproducts"
+  name = "${var.application_name}-getproducts"
 }
 
 resource "aws_sns_topic_subscription" "getproducts" {

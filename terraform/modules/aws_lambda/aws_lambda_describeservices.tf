@@ -5,7 +5,7 @@ module "lambda_function_describeservices" {
 
   source = "terraform-aws-modules/lambda/aws"
 
-  function_name = "${var.application_one_word}-describeservices"
+  function_name = "${var.application_name}-describeservices"
   description   = "Call the Describe Services Endpoint and write Service List to S3"
   tags          = var.common_tags
   handler       = "describe_services.main"
@@ -38,16 +38,16 @@ module "lambda_function_describeservices" {
 # ----------------------------------------------------------------------------------------------------------------------
 # Lambda Trigger
 
-resource "aws_cloudwatch_event_rule" "event" {
+resource "aws_cloudwatch_event_rule" "describeservices" {
 
-  name                = "${var.application_one_word}-event-rule-weekly"
+  name                = "${var.application_name}-event-rule-weekly-describeservices"
   description         = "Run at 6pm UTC every Sunday"
   schedule_expression = "cron(0 18 ? * SUN *)" 
   tags                = var.common_tags
 
 }
 
-resource "aws_cloudwatch_event_target" "lambda" {
+resource "aws_cloudwatch_event_target" "describeservices" {
 
   rule = aws_cloudwatch_event_rule.event.name
   arn  = module.lambda_function_describeservices.lambda_function_arn

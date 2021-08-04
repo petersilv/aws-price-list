@@ -3,18 +3,16 @@
 
 locals {
 
-  snowflake_application = upper(var.application_one_word)
+  snowflake_application_name = upper(var.application_name)
+  database                   = upper(var.snowflake_database)
+  schema                     = upper(var.snowflake_schema)
 
 }
 
 # ----------------------------------------------------------------------------------------------------------------------
 # Variables
 
-variable "application" {
-  type = string
-}
-
-variable "application_one_word" {
+variable "application_name" {
   type = string
 }
 
@@ -24,12 +22,14 @@ variable "common_tags" {
 
 variable "snowflake_database" {
   type = string
-  default = "LANDING_DB"
 }
 
 variable "snowflake_schema" {
   type = string
-  default = "PUBLIC"
+}
+
+variable "stage_prefix" {
+  type = string
 }
 
 variable "aws_account_id" {
