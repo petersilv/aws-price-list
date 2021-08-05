@@ -30,7 +30,7 @@ module "lambda_function_getproductstrigger" {
   allowed_triggers = {
     event_rule = {
       principal  = "events.amazonaws.com"
-      source_arn = aws_cloudwatch_event_rule.event.arn
+      source_arn = aws_cloudwatch_event_rule.getproductstrigger.arn
     }
   }
 
@@ -50,7 +50,7 @@ resource "aws_cloudwatch_event_rule" "getproductstrigger" {
 
 resource "aws_cloudwatch_event_target" "getproductstrigger" {
 
-  rule = aws_cloudwatch_event_rule.event.name
+  rule = aws_cloudwatch_event_rule.getproductstrigger.name
   arn  = module.lambda_function_getproductstrigger.lambda_function_arn
 
 }

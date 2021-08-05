@@ -29,7 +29,7 @@ module "lambda_function_describeservices" {
   allowed_triggers = {
     event_rule = {
       principal  = "events.amazonaws.com"
-      source_arn = aws_cloudwatch_event_rule.event.arn
+      source_arn = aws_cloudwatch_event_rule.describeservices.arn
     }
   }
 
@@ -49,7 +49,7 @@ resource "aws_cloudwatch_event_rule" "describeservices" {
 
 resource "aws_cloudwatch_event_target" "describeservices" {
 
-  rule = aws_cloudwatch_event_rule.event.name
+  rule = aws_cloudwatch_event_rule.describeservices.name
   arn  = module.lambda_function_describeservices.lambda_function_arn
 
 }
