@@ -47,14 +47,34 @@ variable "stage_prefix" {
   description = "The S3 prefix that the Snowflake Stage will get access to (eg. if the you are giving access to the \"public\" folder inside the \"data\" folder in the \"example\" bucket the value would be \"data/public/\"). This can be left blank."
 }
 
-variable "pipe_prefix" {
+variable "pipe_prefix_1" {
   type        = string
-  description = "The S3 prefix that the Pipe will get access to, starting from the stage folder (eg. if the stage has access to the \"data/public/\" prefix and the Pipe should have access to \"data/public/new/\" the value would be \"new/\" ). This can be left blank which would give the same access as the Stage."
+  description = "The S3 prefix that the first Pipe will get access to, starting from the stage folder (eg. if the stage has access to the \"data/public/\" prefix and the Pipe should have access to \"data/public/new/\" the value would be \"new/\" ). This can be left blank which would give the same access as the Stage."
 }
 
-variable "table_name" {
+variable "table_name_1" {
   type        = string
-  description = "The name of the table that the Pipe will write to"
+  description = "The name of the table that the first Pipe will write to"
+}
+
+variable "pipe_prefix_2" {
+  type        = string
+  description = "The S3 prefix that the second Pipe will get access to, starting from the stage folder (eg. if the stage has access to the \"data/public/\" prefix and the Pipe should have access to \"data/public/new/\" the value would be \"new/\" ). This can be left blank which would give the same access as the Stage."
+}
+
+variable "table_name_2" {
+  type        = string
+  description = "The name of the table that the second Pipe will write to"
+}
+
+variable "pipe_prefix_3" {
+  type        = string
+  description = "The S3 prefix that the third Pipe will get access to, starting from the stage folder (eg. if the stage has access to the \"data/public/\" prefix and the Pipe should have access to \"data/public/new/\" the value would be \"new/\" ). This can be left blank which would give the same access as the Stage."
+}
+
+variable "table_name_3" {
+  type        = string
+  description = "The name of the table that the third Pipe will write to"
 }
 
 # ----------------------------------------------------------------------------------------------------------------------

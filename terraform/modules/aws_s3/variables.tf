@@ -12,3 +12,7 @@ variable "application_name" {
 variable "common_tags" {
   type = map
 }
+
+variable "snowflake_pipe_sqs" {
+  type = string
+}

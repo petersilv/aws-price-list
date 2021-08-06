@@ -29,3 +29,18 @@ resource "aws_s3_bucket_public_access_block" "example" {
   restrict_public_buckets = true
 
 }
+
+# ----------------------------------------------------------------------------------------------------------------------
+# S3 Notification
+
+resource "aws_s3_bucket_notification" "bucket_notification" {
+
+  bucket = aws_s3_bucket.s3_bucket.id
+
+  queue {    
+    id = "snowflake-sqs"
+    queue_arn = var.snowflake_pipe_sqs
+    events    = ["s3:ObjectCreated:*"]
+  }
+
+}

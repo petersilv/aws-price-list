@@ -32,13 +32,15 @@ module "aws_s3" {
   application_name            = var.application_name
   common_tags                 = local.common_tags
 
+  snowflake_pipe_sqs    = module.sno_pipe_describeservices.snowflake_pipe_sqs
+
 }
 
 # ----------------------------------------------------------------------------------------------------------------------
 module "aws_lambda" {
   source = "./modules/aws_lambda"
 
-  application_name = local.application_name
+  application_name = var.application_name
   common_tags      = local.common_tags
 
   aws_s3_bucket_id  = module.aws_s3.aws_s3_bucket_id
@@ -64,7 +66,7 @@ module "sno_integration" {
 }
 
 # ----------------------------------------------------------------------------------------------------------------------
-module "sno_pipe" {
+module "sno_pipe_describeservices" {
   source = "./modules/sno_pipe"
 
   application_name = var.application_name
@@ -73,9 +75,37 @@ module "sno_pipe" {
   snowflake_schema   = var.snowflake_schema
   snowflake_stage    = module.sno_integration.snowflake_stage
   stage_prefix       = var.stage_prefix
-  pipe_prefix        = var.pipe_prefix
-  table_name         = var.table_name
+  pipe_prefix        = var.pipe_prefix_1
+  table_name         = var.table_name_1
 
-  aws_s3_bucket_id  = module.aws_s3.aws_s3_bucket_id
+}
 
+# ----------------------------------------------------------------------------------------------------------------------
+module "sno_pipe_getattributevalues" {
+  source = "./modules/sno_pipe"
+
+  application_name = var.application_name
+
+  snowflake_database = var.snowflake_database
+  snowflake_schema   = var.snowflake_schema
+  snowflake_stage    = module.sno_integration.snowflake_stage
+  stage_prefix       = var.stage_prefix
+  pipe_prefix        = var.pipe_prefix_2
+  table_name         = var.table_name_2
+
+}
+
+# ----------------------------------------------------------------------------------------------------------------------
+module "sno_pipe_getproducts" {
+  source = "./modules/sno_pipe"
+
+  application_name = var.application_name
+
+  snowflake_database = var.snowflake_database
+  snowflake_schema   = var.snowflake_schema
+  snowflake_stage    = module.sno_integration.snowflake_stage
+  stage_prefix       = var.stage_prefix
+  pipe_prefix        = var.pipe_prefix_3
+  table_name         = var.table_name_3
+  
 }

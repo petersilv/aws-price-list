@@ -40,7 +40,3 @@ variable "pipe_prefix" {
 variable "table_name" {
   type = string
 }
-
-variable "aws_s3_bucket_id" {
-  type = string
-}
