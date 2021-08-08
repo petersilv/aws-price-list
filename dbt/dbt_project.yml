@@ -18,8 +18,9 @@ clean-targets:
 
 models:
   aws_price_list:
-    pivot:  
+    +materialized: table
+    +transient:    false
 
 vars:
   database: 'demo_db'
-  schema: 'aws_price_list'
+  schema:   'aws_price_list'
