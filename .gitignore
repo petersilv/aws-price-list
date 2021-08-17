@@ -12,6 +12,10 @@ __pycache__/
 # Serverless
 .serverless/
 
+# Tableau
+*.twbr
+*.hyper
+
 # Local .terraform directories
 **/.terraform/*
 .terraform/
