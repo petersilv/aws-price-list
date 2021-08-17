@@ -36,7 +36,7 @@ atr_{{i}}
 Run query -#}
 
 select *
-from {{ref('product_attributes_narrow')}}
-pivot( max({{aggregate_column}}) for {{pivot_column}} in ({{col_list}}) )
-as p ( {{columns_to_show}}, {{col_list_labels}} )
-order by {{columns_to_show}}
+  from {{ref('product_attributes_narrow')}}
+ pivot ( max({{aggregate_column}}) for {{pivot_column}} in ({{col_list}}) )
+    as p ( {{columns_to_show}}, {{col_list_labels}} )
+ order by {{columns_to_show}}
