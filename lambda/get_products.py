@@ -48,7 +48,7 @@ def main(event, context):
     message = json.loads(event['Records'][0]['Sns']['Message'])
 
     # ------------------------------------------------------------------------------------------------------------------
-    # Call Get Attribute Values Endpoint from Boto3
+    # Call Get Products Endpoint from Boto3
 
     pricing_client = boto3.client('pricing', region_name='us-east-1', config=CONFIG)
 
@@ -97,7 +97,6 @@ def main(event, context):
         }
 
         output_list.append(output)
-
 
     # ------------------------------------------------------------------------------------------------------------------
     # Save to S3
