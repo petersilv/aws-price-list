@@ -37,7 +37,8 @@
       ]
     },
     {
-      "servicecode": "AmazonS3"
+      "servicecode": "AmazonS3",
+      "productFamily": "Storage"
     }
   ]
 }
