@@ -1,6 +1,7 @@
 # Project Specific
 lambda/*.zip
 temp/
+tableau/
 
 # Python
 __pycache__/
