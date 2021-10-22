@@ -1,18 +1,10 @@
-{#- ----------------------------------------------------------------------------
-Set variables -#}
-
-{%- set original_table = 'getproducts_json' -%}
-
-{#- ----------------------------------------------------------------------------
-Run query -#}
-
 with
 
 t_all_dates as (
     select directory ::string  as directory
          , file_name ::date    as updated_date
          , records   ::variant as records
-      from {{var('database') ~ '.' ~ var('schema') ~ '.' ~ original_table}}
+      from LANDING_GETPRODUCTS
 ),
 
 t_max_date as (

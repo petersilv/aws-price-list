@@ -1,18 +1,10 @@
-{#- ----------------------------------------------------------------------------
-Set variables -#}
-
-{%- set original_table = 'describeservices_json' -%}
-
-{#- ----------------------------------------------------------------------------
-Run query -#}
-
-with 
+with
 
 t_all_dates as (
     select a.file_name         ::date   as date
          , b.value:ServiceCode ::string as service_code
 
-      from {{var('database') ~ '.' ~ var('schema') ~ '.' ~ original_table}} a
+      from LANDING_DESCRIBESERVICES a
          , lateral flatten (input => a.records) b
 ),
 

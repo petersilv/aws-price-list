@@ -1,6 +1,3 @@
-{#- ----------------------------------------------------------------------------
-Run query -#}
-
 select a.service_code
      , a.product_family
      , a.product_sku

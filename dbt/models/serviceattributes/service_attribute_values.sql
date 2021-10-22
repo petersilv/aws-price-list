@@ -1,12 +1,4 @@
-{#- ----------------------------------------------------------------------------
-Set variables -#}
-
-{%- set original_table = 'getattributevalues_json' -%}
-
-{#- ----------------------------------------------------------------------------
-Run query -#}
-
-with 
+with
 
 t_all_dates as (
     select a.file_name           ::date   as date
@@ -14,7 +6,7 @@ t_all_dates as (
          , b.value:AttributeName ::string as attribute_name
          , c.value:Value         ::string as attribute_value
 
-    from {{var('database') ~ '.' ~ var('schema') ~ '.' ~ original_table}} a
+    from LANDING_GETATTRIBUTEVALUES a
         , lateral flatten (input => a.records) b
         , lateral flatten (input => b.value:AttributeValues) c
 ),
