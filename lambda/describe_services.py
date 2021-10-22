@@ -67,7 +67,7 @@ def main(event, context):
     # ------------------------------------------------------------------------------------------------------------------
     # Send to SNS
 
-    sns_client = boto3.client('sns', region_name='eu-west-2')
+    sns_client = boto3.client('sns', region_name='eu-west-1')
 
     for service in service_list:
 
