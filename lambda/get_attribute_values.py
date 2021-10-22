@@ -73,12 +73,12 @@ def main(event, context):
             attr_value_list += page['AttributeValues']
             response_metadata_list.append(page['ResponseMetadata'])
 
-        logging.info(
-            'Boto3 - ServiceCode: %s, AttributeName: %s, ResponseMetadata: %s', 
-            service_code,
-            attribute_name, 
-            response_metadata_list
-        )
+        # logging.info(
+        #     'Boto3 - ServiceCode: %s, AttributeName: %s, ResponseMetadata: %s', 
+        #     service_code,
+        #     attribute_name, 
+        #     response_metadata_list
+        # )
 
         attributes_list.append(
             {
