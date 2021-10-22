@@ -42,8 +42,8 @@ module "lambda_function_getproductstrigger" {
 resource "aws_cloudwatch_event_rule" "getproductstrigger" {
 
   name                = "${var.application_name}-event-rule-weekly-getproductstrigger"
-  description         = "Run at 6pm UTC every Sunday"
-  schedule_expression = "cron(0 18 ? * SUN *)" 
+  description         = "Run at 7pm UTC on the first of each month"
+  schedule_expression = "cron(0 19 1 * ? *)" 
   tags                = var.common_tags
 
 }

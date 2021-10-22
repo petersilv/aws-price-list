@@ -41,8 +41,8 @@ module "lambda_function_describeservices" {
 resource "aws_cloudwatch_event_rule" "describeservices" {
 
   name                = "${var.application_name}-event-rule-weekly-describeservices"
-  description         = "Run at 6pm UTC every Sunday"
-  schedule_expression = "cron(0 18 ? * SUN *)" 
+  description         = "Run at 6pm UTC on the first of each month"
+  schedule_expression = "cron(0 18 1 * ? *)" 
   tags                = var.common_tags
 
 }
