@@ -9,7 +9,7 @@ resource "aws_s3_bucket" "s3_bucket" {
 
   lifecycle_rule {
     id      = "delete-after-90-days"
-    prefix  = ""
+    prefix  = "data/"
     enabled = true
 
     expiration {
