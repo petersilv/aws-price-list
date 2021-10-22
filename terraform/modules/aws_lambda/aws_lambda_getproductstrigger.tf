@@ -22,7 +22,7 @@ module "lambda_function_getproductstrigger" {
 
   environment_variables = {
     S3_BUCKET = var.aws_s3_bucket_id,
-    S3_PREFIX = "data/lookup/",
+    S3_PREFIX = "lookup/",
     S3_FILENAME = "get_products.json"
     SNS_TOPIC = aws_sns_topic.getproducts.arn
   }
@@ -52,5 +52,16 @@ resource "aws_cloudwatch_event_target" "getproductstrigger" {
 
   rule = aws_cloudwatch_event_rule.getproductstrigger.name
   arn  = module.lambda_function_getproductstrigger.lambda_function_arn
+
+}
+
+# ----------------------------------------------------------------------------------------------------------------------
+# S3 Object - Lookup file
+
+resource "aws_s3_bucket_object" "lookup_file" {
+ 
+  bucket = var.aws_s3_bucket_id
+  key    = "lookup/get_products.json"
+  source = "${path.module}/../../../lookup/get_products.json"
 
 }
