@@ -2,7 +2,7 @@ name: 'aws_price_list'
 version: '1.0.0'
 config-version: 2
 
-profile: 'snowflake-trial'
+profile: 'snowflake-nl-aws-price-list'
 
 source-paths: ["models"]
 analysis-paths: ["analysis"]
@@ -20,7 +20,3 @@ models:
   aws_price_list:
     +materialized: table
     +transient:    false
-
-vars:
-  database: 'demo_db'
-  schema:   'aws_price_list'
