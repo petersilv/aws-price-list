@@ -39,6 +39,10 @@
     {
       "servicecode": "AmazonS3",
       "productFamily": "Storage"
+    },
+    {
+      "servicecode": "AmazonVPC",
+      "operation": "ClientVPNConnections"
     }
   ]
 }
