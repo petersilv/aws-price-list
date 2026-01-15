@@ -1,0 +1,5 @@
+packages:
+  - name: dbt_utils
+    package: fishtown-analytics/dbt_utils
+    version: 0.7.0
+sha1_hash: db1bb989970e0609feceab65036fc9ba75379e4e
