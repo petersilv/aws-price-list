@@ -2,12 +2,8 @@
   "LocationFilters": {
     "locationType": "AWS Region",
     "location": [
-      "EU (Stockholm)",
-      "EU (Paris)",
-      "EU (Milan)",
       "EU (London)",
-      "EU (Ireland)",
-      "EU (Frankfurt)"
+      "EU (Ireland)"
     ]
   },
   "ProductFilters": [
@@ -32,7 +28,7 @@
     {
       "servicecode": "AWSELB",
       "productFamily": [
-        "Load Balancer-Application", 
+        "Load Balancer-Application",
         "Load Balancer-Network"
       ]
     },
