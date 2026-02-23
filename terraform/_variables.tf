@@ -29,15 +29,19 @@ variable "aws_s3_bucket_id" {
 data "aws_caller_identity" "current" {}
 
 locals {
+
   aws_account_id  = data.aws_caller_identity.current.account_id
   aws_caller_arn  = data.aws_caller_identity.current.arn
   aws_caller_user = data.aws_caller_identity.current.user_id
+
+  aws_s3_bucket_arn = "arn:aws:s3:::${var.aws_s3_bucket_id}"
 
   common_tags = {
     application_name = var.application_name
     owner_arn        = local.aws_caller_arn
     created_with     = "Terraform"
   }
+
 }
 
 # ----------------------------------------------------------------------------------------------------------------------
@@ -100,13 +104,15 @@ variable "pipe_prefix" {
 # Snowflake Local Vars
 
 locals {
+
   sno_user              = upper(var.sno_user)
   sno_organization_name = upper(var.sno_organization_name)
   sno_account_name      = upper(var.sno_account_name)
   sno_role              = upper(var.sno_role)
 
-  sno_application_name = upper(var.application_name)
+  sno_application_name = replace(upper(var.application_name), "-", "_")
   sno_database         = upper(var.sno_database)
   sno_schema           = upper(var.sno_schema)
   sno_table            = upper(var.sno_table)
+
 }
