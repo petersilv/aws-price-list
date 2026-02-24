@@ -17,7 +17,7 @@ resource "snowflake_pipe" "pipe" {
   auto_ingest = true
 
   copy_statement = templatefile(
-    "./sql/pipe.sql",
+    "./sno_pipe.sql",
     {
       database : local.sno_database
       schema : snowflake_schema.schema.name
