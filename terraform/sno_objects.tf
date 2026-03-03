@@ -35,9 +35,4 @@ resource "snowflake_table" "json_table" {
     type = "VARCHAR(16777216)"
   }
 
-  column {
-    name = "UPDATED_AT"
-    type = "TIMESTAMP_TZ(9)"
-  }
-
 }

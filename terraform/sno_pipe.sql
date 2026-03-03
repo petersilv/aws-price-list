@@ -6,7 +6,6 @@ copy into ${database}.${schema}.${table}
          , metadata$filename
          , regexp_replace(metadata$filename, '(.*/).*?.json','\\1')
          , regexp_replace(metadata$filename, '.*/(.*?).json','\\1')
-         , current_timestamp::timestamp_tz
 
       from
            @${database}.${schema}.${stage}/${pipe_prefix}
