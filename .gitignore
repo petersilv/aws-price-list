@@ -1,7 +1,7 @@
 # Project Specific
 lambda/*.zip
 temp/
-tableau/
+# tableau/
 
 # dbt
 target/
