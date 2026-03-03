@@ -1,0 +1,7 @@
+sources:
+  - name: aws_price_list
+    database: misc
+    # schema: aws_price_list
+    schema: test_awspricelist
+    tables:
+      - name: landing_getproducts
