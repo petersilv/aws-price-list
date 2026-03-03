@@ -2,7 +2,8 @@
   "LocationFilters": {
     "locationType": "AWS Region",
     "location": [
-      "EU (London)"
+      "EU (London)",
+      "EU (Ireland)"
     ]
   },
   "ProductFilters": [
