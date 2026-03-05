@@ -1,8 +1,8 @@
-select a.service_code
-     , a.product_family
-     , a.product_sku
-     , b.key as attribute_name
-     , b.value ::string as value
+select t1.service_code
+     , t1.product_family
+     , t1.product_sku
+     , t2.key as attribute_name
+     , t2.value ::string as value
 
-  from {{ref('products')}} a
-     , lateral flatten (input => a.attributes) b
+  from {{ref('products')}} t1
+     , lateral flatten (input => t1.attributes) t2

@@ -24,15 +24,14 @@ t_most_recent as (
       and updated_at = max_updated_at
 )
 
+select t1.updated_at                  ::timestamp_tz as updated_at
+     , t2.value:serviceCode           ::string       as service_code
+     , t2.value:product:productFamily ::string       as product_family
+     , t2.value:product:sku           ::string       as product_sku
+     , t2.value:version               ::string       as version
+     , t2.value:publicationDate       ::timestamp_tz as publication_date
+     , t2.value:product:attributes    ::variant      as attributes
+     , t2.value:terms                 ::variant      as terms
 
-select a.updated_at                  ::timestamp_tz as updated_at
-     , b.value:serviceCode           ::string       as service_code
-     , b.value:product:productFamily ::string       as product_family
-     , b.value:product:sku           ::string       as product_sku
-     , b.value:version               ::string       as version
-     , b.value:publicationDate       ::timestamp_tz as publication_date
-     , b.value:product:attributes    ::variant      as attributes
-     , b.value:terms                 ::variant      as terms
-
-  from t_most_recent a
-     , lateral flatten (input => a.records) b
+  from t_most_recent t1
+     , lateral flatten (input => t1.records) t2
