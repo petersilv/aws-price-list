@@ -1,6 +1,7 @@
 select
-*
+price_per_unit
 from
 misc.test_awspricelist.product_terms
-limit 5
+limit
+10
 ;
