@@ -14,7 +14,7 @@
          , t1.applies_to
          , t1.unit
          , t1.currency
-         , t1.price_per_unit
+         , t1.price_per_unit ::double as price_per_unit
          , t2.atr_clockspeed
          , t2.atr_instancetype
          , t2.atr_normalizationsizefactor
