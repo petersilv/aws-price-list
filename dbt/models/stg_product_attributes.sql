@@ -9,7 +9,7 @@ Set variables -#}
 Get list of header names -#}
 
 {%- set col_query -%}
-select distinct {{pivot_column}} from {{ref('product_attributes_narrow')}}
+select distinct {{pivot_column}} from {{ref('stg_product_attributes_narrow')}}
 {%- endset -%}
 
 {%- set results = run_query(col_query) -%}
@@ -36,7 +36,7 @@ atr_{{i}}
 Run query -#}
 
 select *
-  from {{ref('product_attributes_narrow')}}
+  from {{ref('stg_product_attributes_narrow')}}
  pivot ( max({{aggregate_column}}) for {{pivot_column}} in ({{col_list}}) )
     as p ( {{columns_to_show}}, {{col_list_labels}} )
  order by {{columns_to_show}}

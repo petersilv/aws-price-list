@@ -1,37 +1,61 @@
-with
+    select t1.service_code
+         , t1.product_family
+         , t1.product_sku
+         , t1.pricing_type
+         , t1.offer_term_code
+         , t1.effective_date
+         , t1.lease_contract_length
+         , t1.offering_class
+         , t1.purchase_option
+         , t1.rate_code
+         , t1.description
+         , t1.begin_range
+         , t1.end_range
+         , t1.applies_to
+         , t1.unit
+         , t1.currency
+         , t1.price_per_unit ::double as price_per_unit
+         , t2.atr_clockspeed
+         , t2.atr_instancetype
+         , t2.atr_normalizationsizefactor
+         , t2.atr_physicalprocessor
+         , t2.atr_servicecode
+         , t2.atr_storage
+         , t2.atr_location
+         , t2.atr_processorarchitecture
+         , t2.atr_tenancy
+         , t2.atr_intelturboavailable
+         , t2.atr_capacitystatus
+         , t2.atr_ecu
+         , t2.atr_networkperformance
+         , t2.atr_memory
+         , t2.atr_availabilityzone
+         , t2.atr_dedicatedebsthroughput
+         , t2.atr_dedicatedebsthroughputdescription
+         , t2.atr_intelavx2available
+         , t2.atr_intelavxavailable
+         , t2.atr_operatingsystem
+         , t2.atr_regioncode
+         , t2.atr_vpcnetworkingsupport
+         , t2.atr_marketoption
+         , t2.atr_currentgeneration
+         , t2.atr_gpumemory
+         , t2.atr_instancesku
+         , t2.atr_operation
+         , t2.atr_servicename
+         , t2.atr_instancefamily
+         , t2.atr_processorfeatures
+         , t2.atr_licensemodel
+         , t2.atr_preinstalledsw
+         , t2.atr_vcpu
+         , t2.atr_classicnetworkingsupport
+         , t2.atr_enhancednetworkingsupported
+         , t2.atr_usagetype
+         , t2.atr_locationtype
 
-t_all_dates as (
-  select directory                                       ::string       as directory
-       , to_timestamp_tz(file_name, 'yyyy-mm-dd-hh24mi') ::timestamp_tz as updated_at
-       , records                                         ::variant      as records
-    from {{ source('aws_price_list', 'landing_getproducts') }}
-),
+      from {{ref('stg_product_terms')}} t1
+inner join {{ref('stg_product_attributes')}} t2
 
-t_max_date as (
-  select directory as directory_group
-       , max(updated_at) as max_updated_at
-    from t_all_dates
-   group by directory
-),
-
-t_most_recent as (
-  select replace(t_all_dates.directory, 'data/getproducts/', '') as product_group
-       , updated_at
-       , records
-    from t_all_dates
-    inner join t_max_date
-      on directory = directory_group
-      and updated_at = max_updated_at
-)
-
-select t1.updated_at                  ::timestamp_tz as updated_at
-     , t2.value:serviceCode           ::string       as service_code
-     , t2.value:product:productFamily ::string       as product_family
-     , t2.value:product:sku           ::string       as product_sku
-     , t2.value:version               ::string       as version
-     , t2.value:publicationDate       ::timestamp_tz as publication_date
-     , t2.value:product:attributes    ::variant      as attributes
-     , t2.value:terms                 ::variant      as terms
-
-  from t_most_recent t1
-     , lateral flatten (input => t1.records) t2
+        on t1.service_code = t2.service_code
+       and t1.product_family = t2.product_family
+       and t1.product_sku = t2.product_sku

@@ -4,5 +4,5 @@ select t1.service_code
      , t2.key as attribute_name
      , t2.value ::string as value
 
-  from {{ref('products')}} t1
+  from {{ref('stg_products')}} t1
      , lateral flatten (input => t1.attributes) t2

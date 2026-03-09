@@ -16,7 +16,7 @@ select t1.service_code
      , t5.key                                      ::string    as currency
      , t5.value                                    ::double    as price_per_unit
 
-  from {{ref('products')}} t1
+  from {{ref('stg_products')}} t1
      , lateral flatten (input => t1.terms) t2
      , lateral flatten (input => t2.value) t3
      , lateral flatten (input => t3.value:priceDimensions) t4
