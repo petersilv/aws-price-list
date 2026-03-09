@@ -32,8 +32,8 @@
           <member alias='3 years' value='3' />
         </members>
       </column>
-      <column caption='Convert to GBP - Parameter' datatype='boolean' name='[Parameter 2]' param-domain-type='list' role='measure' type='nominal' value='true'>
-        <calculation class='tableau' formula='true' />
+      <column caption='Convert to GBP - Parameter' datatype='boolean' name='[Parameter 2]' param-domain-type='list' role='measure' type='nominal' value='false'>
+        <calculation class='tableau' formula='false' />
         <members>
           <member value='true' />
           <member value='false' />
@@ -1736,715 +1736,12 @@
             <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
           </metadata-record>
           <metadata-record class='column'>
-            <remote-name>ATR_CLOCKSPEED</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[ATR_CLOCKSPEED]</local-name>
-            <parent-name>[PRODUCT_SKUS]</parent-name>
-            <remote-alias>ATR_CLOCKSPEED</remote-alias>
-            <ordinal>4</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>8000</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
-              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>ATR_INSTANCETYPE</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[ATR_INSTANCETYPE]</local-name>
-            <parent-name>[PRODUCT_SKUS]</parent-name>
-            <remote-alias>ATR_INSTANCETYPE</remote-alias>
-            <ordinal>5</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>8000</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
-              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>ATR_NORMALIZATIONSIZEFACTOR</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[ATR_NORMALIZATIONSIZEFACTOR]</local-name>
-            <parent-name>[PRODUCT_SKUS]</parent-name>
-            <remote-alias>ATR_NORMALIZATIONSIZEFACTOR</remote-alias>
-            <ordinal>6</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>8000</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
-              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>ATR_PHYSICALPROCESSOR</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[ATR_PHYSICALPROCESSOR]</local-name>
-            <parent-name>[PRODUCT_SKUS]</parent-name>
-            <remote-alias>ATR_PHYSICALPROCESSOR</remote-alias>
-            <ordinal>7</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>8000</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
-              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>ATR_SERVICECODE</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[ATR_SERVICECODE]</local-name>
-            <parent-name>[PRODUCT_SKUS]</parent-name>
-            <remote-alias>ATR_SERVICECODE</remote-alias>
-            <ordinal>8</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>8000</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
-              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>ATR_STORAGE</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[ATR_STORAGE]</local-name>
-            <parent-name>[PRODUCT_SKUS]</parent-name>
-            <remote-alias>ATR_STORAGE</remote-alias>
-            <ordinal>9</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>8000</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
-              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>ATR_LOCATION</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[ATR_LOCATION]</local-name>
-            <parent-name>[PRODUCT_SKUS]</parent-name>
-            <remote-alias>ATR_LOCATION</remote-alias>
-            <ordinal>10</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>8000</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
-              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>ATR_PROCESSORARCHITECTURE</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[ATR_PROCESSORARCHITECTURE]</local-name>
-            <parent-name>[PRODUCT_SKUS]</parent-name>
-            <remote-alias>ATR_PROCESSORARCHITECTURE</remote-alias>
-            <ordinal>11</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>8000</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
-              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>ATR_TENANCY</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[ATR_TENANCY]</local-name>
-            <parent-name>[PRODUCT_SKUS]</parent-name>
-            <remote-alias>ATR_TENANCY</remote-alias>
-            <ordinal>12</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>8000</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
-              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>ATR_INTELTURBOAVAILABLE</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[ATR_INTELTURBOAVAILABLE]</local-name>
-            <parent-name>[PRODUCT_SKUS]</parent-name>
-            <remote-alias>ATR_INTELTURBOAVAILABLE</remote-alias>
-            <ordinal>13</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>8000</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
-              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>ATR_CAPACITYSTATUS</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[ATR_CAPACITYSTATUS]</local-name>
-            <parent-name>[PRODUCT_SKUS]</parent-name>
-            <remote-alias>ATR_CAPACITYSTATUS</remote-alias>
-            <ordinal>14</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>8000</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
-              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>ATR_ECU</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[ATR_ECU]</local-name>
-            <parent-name>[PRODUCT_SKUS]</parent-name>
-            <remote-alias>ATR_ECU</remote-alias>
-            <ordinal>15</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>8000</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
-              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>ATR_NETWORKPERFORMANCE</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[ATR_NETWORKPERFORMANCE]</local-name>
-            <parent-name>[PRODUCT_SKUS]</parent-name>
-            <remote-alias>ATR_NETWORKPERFORMANCE</remote-alias>
-            <ordinal>16</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>8000</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
-              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>ATR_MEMORY</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[ATR_MEMORY]</local-name>
-            <parent-name>[PRODUCT_SKUS]</parent-name>
-            <remote-alias>ATR_MEMORY</remote-alias>
-            <ordinal>17</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>8000</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
-              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>ATR_AVAILABILITYZONE</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[ATR_AVAILABILITYZONE]</local-name>
-            <parent-name>[PRODUCT_SKUS]</parent-name>
-            <remote-alias>ATR_AVAILABILITYZONE</remote-alias>
-            <ordinal>18</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>8000</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
-              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>ATR_DEDICATEDEBSTHROUGHPUT</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[ATR_DEDICATEDEBSTHROUGHPUT]</local-name>
-            <parent-name>[PRODUCT_SKUS]</parent-name>
-            <remote-alias>ATR_DEDICATEDEBSTHROUGHPUT</remote-alias>
-            <ordinal>19</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>8000</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
-              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>ATR_DEDICATEDEBSTHROUGHPUTDESCRIPTION</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[ATR_DEDICATEDEBSTHROUGHPUTDESCRIPTION]</local-name>
-            <parent-name>[PRODUCT_SKUS]</parent-name>
-            <remote-alias>ATR_DEDICATEDEBSTHROUGHPUTDESCRIPTION</remote-alias>
-            <ordinal>20</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>8000</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
-              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>ATR_INTELAVX2AVAILABLE</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[ATR_INTELAVX2AVAILABLE]</local-name>
-            <parent-name>[PRODUCT_SKUS]</parent-name>
-            <remote-alias>ATR_INTELAVX2AVAILABLE</remote-alias>
-            <ordinal>21</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>8000</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
-              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>ATR_INTELAVXAVAILABLE</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[ATR_INTELAVXAVAILABLE]</local-name>
-            <parent-name>[PRODUCT_SKUS]</parent-name>
-            <remote-alias>ATR_INTELAVXAVAILABLE</remote-alias>
-            <ordinal>22</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>8000</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
-              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>ATR_OPERATINGSYSTEM</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[ATR_OPERATINGSYSTEM]</local-name>
-            <parent-name>[PRODUCT_SKUS]</parent-name>
-            <remote-alias>ATR_OPERATINGSYSTEM</remote-alias>
-            <ordinal>23</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>8000</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
-              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>ATR_REGIONCODE</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[ATR_REGIONCODE]</local-name>
-            <parent-name>[PRODUCT_SKUS]</parent-name>
-            <remote-alias>ATR_REGIONCODE</remote-alias>
-            <ordinal>24</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>8000</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
-              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>ATR_VPCNETWORKINGSUPPORT</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[ATR_VPCNETWORKINGSUPPORT]</local-name>
-            <parent-name>[PRODUCT_SKUS]</parent-name>
-            <remote-alias>ATR_VPCNETWORKINGSUPPORT</remote-alias>
-            <ordinal>25</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>8000</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
-              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>ATR_MARKETOPTION</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[ATR_MARKETOPTION]</local-name>
-            <parent-name>[PRODUCT_SKUS]</parent-name>
-            <remote-alias>ATR_MARKETOPTION</remote-alias>
-            <ordinal>26</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>8000</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
-              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>ATR_CURRENTGENERATION</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[ATR_CURRENTGENERATION]</local-name>
-            <parent-name>[PRODUCT_SKUS]</parent-name>
-            <remote-alias>ATR_CURRENTGENERATION</remote-alias>
-            <ordinal>27</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>8000</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
-              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>ATR_GPUMEMORY</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[ATR_GPUMEMORY]</local-name>
-            <parent-name>[PRODUCT_SKUS]</parent-name>
-            <remote-alias>ATR_GPUMEMORY</remote-alias>
-            <ordinal>28</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>8000</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
-              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>ATR_INSTANCESKU</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[ATR_INSTANCESKU]</local-name>
-            <parent-name>[PRODUCT_SKUS]</parent-name>
-            <remote-alias>ATR_INSTANCESKU</remote-alias>
-            <ordinal>29</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>8000</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
-              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>ATR_OPERATION</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[ATR_OPERATION]</local-name>
-            <parent-name>[PRODUCT_SKUS]</parent-name>
-            <remote-alias>ATR_OPERATION</remote-alias>
-            <ordinal>30</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>8000</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
-              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>ATR_SERVICENAME</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[ATR_SERVICENAME]</local-name>
-            <parent-name>[PRODUCT_SKUS]</parent-name>
-            <remote-alias>ATR_SERVICENAME</remote-alias>
-            <ordinal>31</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>8000</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
-              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>ATR_INSTANCEFAMILY</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[ATR_INSTANCEFAMILY]</local-name>
-            <parent-name>[PRODUCT_SKUS]</parent-name>
-            <remote-alias>ATR_INSTANCEFAMILY</remote-alias>
-            <ordinal>32</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>8000</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
-              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>ATR_PROCESSORFEATURES</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[ATR_PROCESSORFEATURES]</local-name>
-            <parent-name>[PRODUCT_SKUS]</parent-name>
-            <remote-alias>ATR_PROCESSORFEATURES</remote-alias>
-            <ordinal>33</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>8000</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
-              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>ATR_LICENSEMODEL</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[ATR_LICENSEMODEL]</local-name>
-            <parent-name>[PRODUCT_SKUS]</parent-name>
-            <remote-alias>ATR_LICENSEMODEL</remote-alias>
-            <ordinal>34</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>8000</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
-              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>ATR_PREINSTALLEDSW</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[ATR_PREINSTALLEDSW]</local-name>
-            <parent-name>[PRODUCT_SKUS]</parent-name>
-            <remote-alias>ATR_PREINSTALLEDSW</remote-alias>
-            <ordinal>35</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>8000</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
-              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>ATR_VCPU</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[ATR_VCPU]</local-name>
-            <parent-name>[PRODUCT_SKUS]</parent-name>
-            <remote-alias>ATR_VCPU</remote-alias>
-            <ordinal>36</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>8000</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
-              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>ATR_CLASSICNETWORKINGSUPPORT</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[ATR_CLASSICNETWORKINGSUPPORT]</local-name>
-            <parent-name>[PRODUCT_SKUS]</parent-name>
-            <remote-alias>ATR_CLASSICNETWORKINGSUPPORT</remote-alias>
-            <ordinal>37</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>8000</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
-              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>ATR_ENHANCEDNETWORKINGSUPPORTED</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[ATR_ENHANCEDNETWORKINGSUPPORTED]</local-name>
-            <parent-name>[PRODUCT_SKUS]</parent-name>
-            <remote-alias>ATR_ENHANCEDNETWORKINGSUPPORTED</remote-alias>
-            <ordinal>38</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>8000</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
-              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>ATR_USAGETYPE</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[ATR_USAGETYPE]</local-name>
-            <parent-name>[PRODUCT_SKUS]</parent-name>
-            <remote-alias>ATR_USAGETYPE</remote-alias>
-            <ordinal>39</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>8000</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
-              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>ATR_LOCATIONTYPE</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[ATR_LOCATIONTYPE]</local-name>
-            <parent-name>[PRODUCT_SKUS]</parent-name>
-            <remote-alias>ATR_LOCATIONTYPE</remote-alias>
-            <ordinal>40</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>8000</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
-              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
-          </metadata-record>
-          <metadata-record class='column'>
             <remote-name>PRICING_TYPE</remote-name>
             <remote-type>129</remote-type>
             <local-name>[PRICING_TYPE]</local-name>
             <parent-name>[PRODUCT_SKUS]</parent-name>
             <remote-alias>PRICING_TYPE</remote-alias>
-            <ordinal>41</ordinal>
+            <ordinal>4</ordinal>
             <local-type>string</local-type>
             <aggregation>Count</aggregation>
             <width>8000</width>
@@ -2463,7 +1760,7 @@
             <local-name>[OFFER_TERM_CODE]</local-name>
             <parent-name>[PRODUCT_SKUS]</parent-name>
             <remote-alias>OFFER_TERM_CODE</remote-alias>
-            <ordinal>42</ordinal>
+            <ordinal>5</ordinal>
             <local-type>string</local-type>
             <aggregation>Count</aggregation>
             <width>8000</width>
@@ -2482,7 +1779,7 @@
             <local-name>[EFFECTIVE_DATE]</local-name>
             <parent-name>[PRODUCT_SKUS]</parent-name>
             <remote-alias>EFFECTIVE_DATE</remote-alias>
-            <ordinal>43</ordinal>
+            <ordinal>6</ordinal>
             <local-type>datetime</local-type>
             <aggregation>Year</aggregation>
             <contains-null>true</contains-null>
@@ -2498,7 +1795,7 @@
             <local-name>[LEASE_CONTRACT_LENGTH]</local-name>
             <parent-name>[PRODUCT_SKUS]</parent-name>
             <remote-alias>LEASE_CONTRACT_LENGTH</remote-alias>
-            <ordinal>44</ordinal>
+            <ordinal>7</ordinal>
             <local-type>string</local-type>
             <aggregation>Count</aggregation>
             <width>8000</width>
@@ -2517,7 +1814,7 @@
             <local-name>[OFFERING_CLASS]</local-name>
             <parent-name>[PRODUCT_SKUS]</parent-name>
             <remote-alias>OFFERING_CLASS</remote-alias>
-            <ordinal>45</ordinal>
+            <ordinal>8</ordinal>
             <local-type>string</local-type>
             <aggregation>Count</aggregation>
             <width>8000</width>
@@ -2536,7 +1833,7 @@
             <local-name>[PURCHASE_OPTION]</local-name>
             <parent-name>[PRODUCT_SKUS]</parent-name>
             <remote-alias>PURCHASE_OPTION</remote-alias>
-            <ordinal>46</ordinal>
+            <ordinal>9</ordinal>
             <local-type>string</local-type>
             <aggregation>Count</aggregation>
             <width>8000</width>
@@ -2555,7 +1852,7 @@
             <local-name>[RATE_CODE]</local-name>
             <parent-name>[PRODUCT_SKUS]</parent-name>
             <remote-alias>RATE_CODE</remote-alias>
-            <ordinal>47</ordinal>
+            <ordinal>10</ordinal>
             <local-type>string</local-type>
             <aggregation>Count</aggregation>
             <width>8000</width>
@@ -2574,7 +1871,7 @@
             <local-name>[DESCRIPTION]</local-name>
             <parent-name>[PRODUCT_SKUS]</parent-name>
             <remote-alias>DESCRIPTION</remote-alias>
-            <ordinal>48</ordinal>
+            <ordinal>11</ordinal>
             <local-type>string</local-type>
             <aggregation>Count</aggregation>
             <width>8000</width>
@@ -2593,7 +1890,7 @@
             <local-name>[BEGIN_RANGE]</local-name>
             <parent-name>[PRODUCT_SKUS]</parent-name>
             <remote-alias>BEGIN_RANGE</remote-alias>
-            <ordinal>49</ordinal>
+            <ordinal>12</ordinal>
             <local-type>string</local-type>
             <aggregation>Count</aggregation>
             <width>8000</width>
@@ -2612,7 +1909,7 @@
             <local-name>[END_RANGE]</local-name>
             <parent-name>[PRODUCT_SKUS]</parent-name>
             <remote-alias>END_RANGE</remote-alias>
-            <ordinal>50</ordinal>
+            <ordinal>13</ordinal>
             <local-type>string</local-type>
             <aggregation>Count</aggregation>
             <width>8000</width>
@@ -2631,7 +1928,7 @@
             <local-name>[APPLIES_TO]</local-name>
             <parent-name>[PRODUCT_SKUS]</parent-name>
             <remote-alias>APPLIES_TO</remote-alias>
-            <ordinal>51</ordinal>
+            <ordinal>14</ordinal>
             <local-type>string</local-type>
             <aggregation>Count</aggregation>
             <width>8000</width>
@@ -2650,7 +1947,7 @@
             <local-name>[UNIT]</local-name>
             <parent-name>[PRODUCT_SKUS]</parent-name>
             <remote-alias>UNIT</remote-alias>
-            <ordinal>52</ordinal>
+            <ordinal>15</ordinal>
             <local-type>string</local-type>
             <aggregation>Count</aggregation>
             <width>8000</width>
@@ -2669,7 +1966,7 @@
             <local-name>[CURRENCY]</local-name>
             <parent-name>[PRODUCT_SKUS]</parent-name>
             <remote-alias>CURRENCY</remote-alias>
-            <ordinal>53</ordinal>
+            <ordinal>16</ordinal>
             <local-type>string</local-type>
             <aggregation>Count</aggregation>
             <width>8000</width>
@@ -2688,7 +1985,7 @@
             <local-name>[PRICE_PER_UNIT]</local-name>
             <parent-name>[PRODUCT_SKUS]</parent-name>
             <remote-alias>PRICE_PER_UNIT</remote-alias>
-            <ordinal>54</ordinal>
+            <ordinal>17</ordinal>
             <local-type>integer</local-type>
             <aggregation>Sum</aggregation>
             <precision>38</precision>
@@ -2697,6 +1994,709 @@
             <attributes>
               <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
               <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ATR_CLOCKSPEED</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ATR_CLOCKSPEED]</local-name>
+            <parent-name>[PRODUCT_SKUS]</parent-name>
+            <remote-alias>ATR_CLOCKSPEED</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>8000</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ATR_INSTANCETYPE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ATR_INSTANCETYPE]</local-name>
+            <parent-name>[PRODUCT_SKUS]</parent-name>
+            <remote-alias>ATR_INSTANCETYPE</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>8000</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ATR_NORMALIZATIONSIZEFACTOR</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ATR_NORMALIZATIONSIZEFACTOR]</local-name>
+            <parent-name>[PRODUCT_SKUS]</parent-name>
+            <remote-alias>ATR_NORMALIZATIONSIZEFACTOR</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>8000</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ATR_PHYSICALPROCESSOR</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ATR_PHYSICALPROCESSOR]</local-name>
+            <parent-name>[PRODUCT_SKUS]</parent-name>
+            <remote-alias>ATR_PHYSICALPROCESSOR</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>8000</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ATR_SERVICECODE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ATR_SERVICECODE]</local-name>
+            <parent-name>[PRODUCT_SKUS]</parent-name>
+            <remote-alias>ATR_SERVICECODE</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>8000</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ATR_STORAGE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ATR_STORAGE]</local-name>
+            <parent-name>[PRODUCT_SKUS]</parent-name>
+            <remote-alias>ATR_STORAGE</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>8000</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ATR_LOCATION</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ATR_LOCATION]</local-name>
+            <parent-name>[PRODUCT_SKUS]</parent-name>
+            <remote-alias>ATR_LOCATION</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>8000</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ATR_PROCESSORARCHITECTURE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ATR_PROCESSORARCHITECTURE]</local-name>
+            <parent-name>[PRODUCT_SKUS]</parent-name>
+            <remote-alias>ATR_PROCESSORARCHITECTURE</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>8000</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ATR_TENANCY</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ATR_TENANCY]</local-name>
+            <parent-name>[PRODUCT_SKUS]</parent-name>
+            <remote-alias>ATR_TENANCY</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>8000</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ATR_INTELTURBOAVAILABLE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ATR_INTELTURBOAVAILABLE]</local-name>
+            <parent-name>[PRODUCT_SKUS]</parent-name>
+            <remote-alias>ATR_INTELTURBOAVAILABLE</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>8000</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ATR_CAPACITYSTATUS</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ATR_CAPACITYSTATUS]</local-name>
+            <parent-name>[PRODUCT_SKUS]</parent-name>
+            <remote-alias>ATR_CAPACITYSTATUS</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>8000</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ATR_ECU</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ATR_ECU]</local-name>
+            <parent-name>[PRODUCT_SKUS]</parent-name>
+            <remote-alias>ATR_ECU</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>8000</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ATR_NETWORKPERFORMANCE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ATR_NETWORKPERFORMANCE]</local-name>
+            <parent-name>[PRODUCT_SKUS]</parent-name>
+            <remote-alias>ATR_NETWORKPERFORMANCE</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>8000</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ATR_MEMORY</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ATR_MEMORY]</local-name>
+            <parent-name>[PRODUCT_SKUS]</parent-name>
+            <remote-alias>ATR_MEMORY</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>8000</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ATR_AVAILABILITYZONE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ATR_AVAILABILITYZONE]</local-name>
+            <parent-name>[PRODUCT_SKUS]</parent-name>
+            <remote-alias>ATR_AVAILABILITYZONE</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>8000</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ATR_DEDICATEDEBSTHROUGHPUT</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ATR_DEDICATEDEBSTHROUGHPUT]</local-name>
+            <parent-name>[PRODUCT_SKUS]</parent-name>
+            <remote-alias>ATR_DEDICATEDEBSTHROUGHPUT</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>8000</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ATR_DEDICATEDEBSTHROUGHPUTDESCRIPTION</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ATR_DEDICATEDEBSTHROUGHPUTDESCRIPTION]</local-name>
+            <parent-name>[PRODUCT_SKUS]</parent-name>
+            <remote-alias>ATR_DEDICATEDEBSTHROUGHPUTDESCRIPTION</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>8000</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ATR_INTELAVX2AVAILABLE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ATR_INTELAVX2AVAILABLE]</local-name>
+            <parent-name>[PRODUCT_SKUS]</parent-name>
+            <remote-alias>ATR_INTELAVX2AVAILABLE</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>8000</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ATR_INTELAVXAVAILABLE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ATR_INTELAVXAVAILABLE]</local-name>
+            <parent-name>[PRODUCT_SKUS]</parent-name>
+            <remote-alias>ATR_INTELAVXAVAILABLE</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>8000</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ATR_OPERATINGSYSTEM</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ATR_OPERATINGSYSTEM]</local-name>
+            <parent-name>[PRODUCT_SKUS]</parent-name>
+            <remote-alias>ATR_OPERATINGSYSTEM</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>8000</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ATR_REGIONCODE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ATR_REGIONCODE]</local-name>
+            <parent-name>[PRODUCT_SKUS]</parent-name>
+            <remote-alias>ATR_REGIONCODE</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>8000</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ATR_VPCNETWORKINGSUPPORT</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ATR_VPCNETWORKINGSUPPORT]</local-name>
+            <parent-name>[PRODUCT_SKUS]</parent-name>
+            <remote-alias>ATR_VPCNETWORKINGSUPPORT</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>8000</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ATR_MARKETOPTION</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ATR_MARKETOPTION]</local-name>
+            <parent-name>[PRODUCT_SKUS]</parent-name>
+            <remote-alias>ATR_MARKETOPTION</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>8000</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ATR_CURRENTGENERATION</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ATR_CURRENTGENERATION]</local-name>
+            <parent-name>[PRODUCT_SKUS]</parent-name>
+            <remote-alias>ATR_CURRENTGENERATION</remote-alias>
+            <ordinal>41</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>8000</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ATR_GPUMEMORY</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ATR_GPUMEMORY]</local-name>
+            <parent-name>[PRODUCT_SKUS]</parent-name>
+            <remote-alias>ATR_GPUMEMORY</remote-alias>
+            <ordinal>42</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>8000</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ATR_INSTANCESKU</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ATR_INSTANCESKU]</local-name>
+            <parent-name>[PRODUCT_SKUS]</parent-name>
+            <remote-alias>ATR_INSTANCESKU</remote-alias>
+            <ordinal>43</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>8000</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ATR_OPERATION</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ATR_OPERATION]</local-name>
+            <parent-name>[PRODUCT_SKUS]</parent-name>
+            <remote-alias>ATR_OPERATION</remote-alias>
+            <ordinal>44</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>8000</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ATR_SERVICENAME</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ATR_SERVICENAME]</local-name>
+            <parent-name>[PRODUCT_SKUS]</parent-name>
+            <remote-alias>ATR_SERVICENAME</remote-alias>
+            <ordinal>45</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>8000</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ATR_INSTANCEFAMILY</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ATR_INSTANCEFAMILY]</local-name>
+            <parent-name>[PRODUCT_SKUS]</parent-name>
+            <remote-alias>ATR_INSTANCEFAMILY</remote-alias>
+            <ordinal>46</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>8000</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ATR_PROCESSORFEATURES</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ATR_PROCESSORFEATURES]</local-name>
+            <parent-name>[PRODUCT_SKUS]</parent-name>
+            <remote-alias>ATR_PROCESSORFEATURES</remote-alias>
+            <ordinal>47</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>8000</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ATR_LICENSEMODEL</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ATR_LICENSEMODEL]</local-name>
+            <parent-name>[PRODUCT_SKUS]</parent-name>
+            <remote-alias>ATR_LICENSEMODEL</remote-alias>
+            <ordinal>48</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>8000</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ATR_PREINSTALLEDSW</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ATR_PREINSTALLEDSW]</local-name>
+            <parent-name>[PRODUCT_SKUS]</parent-name>
+            <remote-alias>ATR_PREINSTALLEDSW</remote-alias>
+            <ordinal>49</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>8000</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ATR_VCPU</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ATR_VCPU]</local-name>
+            <parent-name>[PRODUCT_SKUS]</parent-name>
+            <remote-alias>ATR_VCPU</remote-alias>
+            <ordinal>50</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>8000</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ATR_CLASSICNETWORKINGSUPPORT</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ATR_CLASSICNETWORKINGSUPPORT]</local-name>
+            <parent-name>[PRODUCT_SKUS]</parent-name>
+            <remote-alias>ATR_CLASSICNETWORKINGSUPPORT</remote-alias>
+            <ordinal>51</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>8000</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ATR_ENHANCEDNETWORKINGSUPPORTED</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ATR_ENHANCEDNETWORKINGSUPPORTED]</local-name>
+            <parent-name>[PRODUCT_SKUS]</parent-name>
+            <remote-alias>ATR_ENHANCEDNETWORKINGSUPPORTED</remote-alias>
+            <ordinal>52</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>8000</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ATR_USAGETYPE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ATR_USAGETYPE]</local-name>
+            <parent-name>[PRODUCT_SKUS]</parent-name>
+            <remote-alias>ATR_USAGETYPE</remote-alias>
+            <ordinal>53</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>8000</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ATR_LOCATIONTYPE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ATR_LOCATIONTYPE]</local-name>
+            <parent-name>[PRODUCT_SKUS]</parent-name>
+            <remote-alias>ATR_LOCATIONTYPE</remote-alias>
+            <ordinal>54</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>8000</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
             </attributes>
             <object-id>[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]</object-id>
           </metadata-record>
@@ -2739,7 +2739,7 @@
       <column caption='Atr Storage' datatype='string' name='[ATR_STORAGE]' role='dimension' type='nominal' />
       <column caption='Atr Tenancy' datatype='string' name='[ATR_TENANCY]' role='dimension' type='nominal' />
       <column caption='Atr Usagetype' datatype='string' name='[ATR_USAGETYPE]' role='dimension' type='nominal' />
-      <column caption='Atr Vcpu' datatype='string' name='[ATR_VCPU]' role='dimension' type='nominal' />
+      <column caption='Atr Vcpu' datatype='integer' datatype-customized='true' name='[ATR_VCPU]' role='dimension' type='ordinal' />
       <column caption='Atr Vpcnetworkingsupport' datatype='string' name='[ATR_VPCNETWORKINGSUPPORT]' role='dimension' type='nominal' />
       <column caption='Begin Range' datatype='string' name='[BEGIN_RANGE]' role='dimension' type='nominal' />
       <column caption='Currency' datatype='string' name='[CURRENCY]' role='dimension' type='nominal' />
@@ -2792,6 +2792,12 @@
       <column caption='Unit' datatype='string' name='[UNIT]' role='dimension' type='nominal' />
       <column caption='PRODUCT_SKUS' datatype='table' name='[__tableau_internal_object_id__].[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]' role='measure' type='quantitative' />
       <folders-common>
+        <folder name='EC2 Instances'>
+          <folder-item name='[Calculation_174584899463847942]' type='field' />
+          <folder-item name='[Calculation_174584899741618184]' type='field' />
+          <folder-item name='[Calculation_4940941415770066944]' type='field' />
+          <folder-item name='[Calculation_871094727506669571]' type='field' />
+        </folder>
         <folder name='Price in Currency'>
           <folder-item name='[Calculation_1572319265402302464]' type='field' />
           <folder-item name='[Calculation_1572319265402642433]' type='field' />
@@ -2859,7 +2865,7 @@
           <folder-item name='[UNIT]' type='field' />
         </folder>
       </folders-common>
-      <layout common-percentage='0.849105' dim-ordering='alphabetic' measure-ordering='alphabetic' parameter-percentage='0.150895' show-structure='false' user-set-layout-v2='true' />
+      <layout common-percentage='0.812065' dim-ordering='alphabetic' measure-ordering='alphabetic' parameter-percentage='0.187935' show-structure='false' user-set-layout-v2='true' />
       <semantic-values>
         <semantic-value key='[Country].[Name]' value='&quot;United Kingdom&quot;' />
       </semantic-values>
@@ -2875,8 +2881,8 @@
             <alias key='3' value='3 years' />
           </aliases>
         </column>
-        <column caption='Convert to GBP - Parameter' datatype='boolean' folder-name='Overall' name='[Parameter 2]' param-domain-type='list' role='measure' type='nominal' value='true'>
-          <calculation class='tableau' formula='true' />
+        <column caption='Convert to GBP - Parameter' datatype='boolean' folder-name='Overall' name='[Parameter 2]' param-domain-type='list' role='measure' type='nominal' value='false'>
+          <calculation class='tableau' formula='false' />
         </column>
         <column alias='Standard' caption='EC2 Instance Offering Class - Parameter' datatype='string' folder-name='EC2 Instance' name='[Parameter 3]' param-domain-type='list' role='measure' type='nominal' value='&quot;standard&quot;'>
           <calculation class='tableau' formula='&quot;standard&quot;' />
@@ -2931,8 +2937,8 @@
                 <alias key='3' value='3 years' />
               </aliases>
             </column>
-            <column caption='Convert to GBP - Parameter' datatype='boolean' folder-name='Overall' name='[Parameter 2]' param-domain-type='list' role='measure' type='nominal' value='true'>
-              <calculation class='tableau' formula='true' />
+            <column caption='Convert to GBP - Parameter' datatype='boolean' folder-name='Overall' name='[Parameter 2]' param-domain-type='list' role='measure' type='nominal' value='false'>
+              <calculation class='tableau' formula='false' />
             </column>
             <column alias='Standard' caption='EC2 Instance Offering Class - Parameter' datatype='string' folder-name='EC2 Instance' name='[Parameter 3]' param-domain-type='list' role='measure' type='nominal' value='&quot;standard&quot;'>
               <calculation class='tableau' formula='&quot;standard&quot;' />
@@ -3058,6 +3064,8 @@
                 <run>Æ&#10;</run>
                 <run fontcolor='#555555' fontsize='8'>Per Year: </run>
                 <run fontcolor='#555555' fontname='Tableau Bold' fontsize='8'><![CDATA[<[federated.1iiuim80cdohbt14q9y8u1gflxwz].[usr:Calculation_1572319265402642433:qk]><[federated.1iiuim80cdohbt14q9y8u1gflxwz].[usr:Calculation_1572319265408684037:qk]>]]></run>
+                <run>Æ&#10;&#10;&#10;</run>
+                <run fontcolor='#555555' fontname='Tableau Bold' fontsize='8'>Æ&#10;</run>
               </formatted-text>
             </customized-label>
             <style>
@@ -3072,9 +3080,141 @@
       </table>
       <simple-id uuid='{3892EC71-4CE7-4491-80EF-6660BBA4859B}' />
     </worksheet>
+    <worksheet name='Sheet 2'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='AWS Price List (Test)' name='federated.1iiuim80cdohbt14q9y8u1gflxwz' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column alias='3 years' caption='Number of Years - Parameter' datatype='integer' folder-name='Overall' name='[Parameter 1]' param-domain-type='list' role='measure' type='quantitative' value='3'>
+              <calculation class='tableau' formula='3' />
+              <aliases>
+                <alias key='1' value='1 year' />
+                <alias key='3' value='3 years' />
+              </aliases>
+            </column>
+            <column alias='Standard' caption='EC2 Instance Offering Class - Parameter' datatype='string' folder-name='EC2 Instance' name='[Parameter 3]' param-domain-type='list' role='measure' type='nominal' value='&quot;standard&quot;'>
+              <calculation class='tableau' formula='&quot;standard&quot;' />
+              <aliases>
+                <alias key='&quot;convertible&quot;' value='Convertible' />
+                <alias key='&quot;standard&quot;' value='Standard' />
+              </aliases>
+            </column>
+            <column caption='EC2 Instance Purchase Option - Parameter' datatype='string' folder-name='EC2 Instance' name='[Parameter 4]' param-domain-type='list' role='measure' type='nominal' value='&quot;No Upfront&quot;'>
+              <calculation class='tableau' formula='&quot;No Upfront&quot;' />
+            </column>
+            <column alias='On Demand' caption='EC2 Instance Pricing Type - Parameter' datatype='string' folder-name='EC2 Instance' name='[Parameter 5]' param-domain-type='list' role='measure' type='nominal' value='&quot;OnDemand&quot;'>
+              <calculation class='tableau' formula='&quot;OnDemand&quot;' />
+              <aliases>
+                <alias key='&quot;OnDemand&quot;' value='On Demand' />
+              </aliases>
+            </column>
+            <column caption='EC2 Instance Operating System - Parameter' datatype='string' folder-name='EC2 Instance' name='[Parameter 6]' param-domain-type='list' role='measure' type='nominal' value='&quot;Linux&quot;'>
+              <calculation class='tableau' formula='&quot;Linux&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1iiuim80cdohbt14q9y8u1gflxwz'>
+            <column caption='Atr Capacitystatus' datatype='string' name='[ATR_CAPACITYSTATUS]' role='dimension' type='nominal' />
+            <column caption='Atr Instancetype' datatype='string' name='[ATR_INSTANCETYPE]' role='dimension' type='nominal' />
+            <column caption='Atr Licensemodel' datatype='string' name='[ATR_LICENSEMODEL]' role='dimension' type='nominal' />
+            <column caption='Atr Location' datatype='string' name='[ATR_LOCATION]' role='dimension' type='nominal' />
+            <column caption='Atr Operatingsystem' datatype='string' name='[ATR_OPERATINGSYSTEM]' role='dimension' type='nominal' />
+            <column caption='Atr Preinstalledsw' datatype='string' name='[ATR_PREINSTALLEDSW]' role='dimension' type='nominal' />
+            <column caption='Filter EC2 Instance' datatype='boolean' name='[Calculation_174584899741618184]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='if [SERVICE_CODE] = &apos;AmazonEC2&apos; and [PRODUCT_FAMILY] = &apos;Compute Instance&apos; then &#10;&#10;[PRICING_TYPE] = [Parameters].[Parameter 5]&#10;and &#10;[ATR_OPERATINGSYSTEM] = [Parameters].[Parameter 6]&#10;and &#10;[ATR_CAPACITYSTATUS] = &apos;Used&apos;&#10;and &#10;[ATR_PREINSTALLEDSW] = &apos;NA&apos;&#10;and&#10;[ATR_LICENSEMODEL] = &apos;No License required&apos;&#10;and&#10;&#10;&#10;if [PRICING_TYPE] = &apos;Reserved&apos; then&#10;&#10;    case [Parameters].[Parameter 1]&#10;    when 1 then [LEASE_CONTRACT_LENGTH] = &apos;1yr&apos;&#10;    when 3 then [LEASE_CONTRACT_LENGTH] = &apos;3yr&apos;&#10;    end&#10;&#10;    and [OFFERING_CLASS] = [Parameters].[Parameter 3]&#10;&#10;    and [PURCHASE_OPTION] = [Parameters].[Parameter 4]&#10;&#10;elseif [PRICING_TYPE] = &apos;OnDemand&apos; then &#10;&#10;    ISNULL([LEASE_CONTRACT_LENGTH])&#10;    and ISNULL([OFFERING_CLASS])&#10;    and ISNULL([PURCHASE_OPTION])&#10;&#10;end&#10;&#10;else TRUE&#10;end' />
+            </column>
+            <column caption='Lease Contract Length' datatype='string' name='[LEASE_CONTRACT_LENGTH]' role='dimension' type='nominal' />
+            <column caption='Offering Class' datatype='string' name='[OFFERING_CLASS]' role='dimension' type='nominal' />
+            <column caption='Pricing Type' datatype='string' name='[PRICING_TYPE]' role='dimension' type='nominal' />
+            <column caption='Product Family' datatype='string' name='[PRODUCT_FAMILY]' role='dimension' type='nominal' />
+            <column caption='Product Sku' datatype='string' name='[PRODUCT_SKU]' role='dimension' type='nominal' />
+            <column caption='Purchase Option' datatype='string' name='[PURCHASE_OPTION]' role='dimension' type='nominal' />
+            <column caption='Service Code' datatype='string' name='[SERVICE_CODE]' role='dimension' type='nominal' />
+            <column caption='PRODUCT_SKUS' datatype='table' name='[__tableau_internal_object_id__].[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[ATR_INSTANCETYPE]' derivation='None' name='[none:ATR_INSTANCETYPE:nk]' pivot='key' type='nominal' />
+            <column-instance column='[ATR_LOCATION]' derivation='None' name='[none:ATR_LOCATION:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_174584899741618184]' derivation='None' name='[none:Calculation_174584899741618184:nk]' pivot='key' type='nominal' />
+            <column-instance column='[PRODUCT_FAMILY]' derivation='None' name='[none:PRODUCT_FAMILY:nk]' pivot='key' type='nominal' />
+            <column-instance column='[PRODUCT_SKU]' derivation='None' name='[none:PRODUCT_SKU:nk]' pivot='key' type='nominal' />
+            <column-instance column='[SERVICE_CODE]' derivation='None' name='[none:SERVICE_CODE:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1iiuim80cdohbt14q9y8u1gflxwz].[none:ATR_INSTANCETYPE:nk]'>
+            <groupfilter function='member' level='[none:ATR_INSTANCETYPE:nk]' member='&quot;r6i.4xlarge&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1iiuim80cdohbt14q9y8u1gflxwz].[none:ATR_LOCATION:nk]' context='true'>
+            <groupfilter function='member' level='[none:ATR_LOCATION:nk]' member='&quot;EU (London)&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1iiuim80cdohbt14q9y8u1gflxwz].[none:Calculation_174584899741618184:nk]'>
+            <groupfilter function='member' level='[none:Calculation_174584899741618184:nk]' member='true' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1iiuim80cdohbt14q9y8u1gflxwz].[none:PRODUCT_FAMILY:nk]' context='true'>
+            <groupfilter function='member' level='[none:PRODUCT_FAMILY:nk]' member='&quot;Compute Instance&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1iiuim80cdohbt14q9y8u1gflxwz].[none:SERVICE_CODE:nk]' context='true'>
+            <groupfilter function='member' level='[none:SERVICE_CODE:nk]' member='&quot;AmazonEC2&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1iiuim80cdohbt14q9y8u1gflxwz].[none:ATR_LOCATION:nk]</column>
+            <column>[federated.1iiuim80cdohbt14q9y8u1gflxwz].[none:PRODUCT_FAMILY:nk]</column>
+            <column>[federated.1iiuim80cdohbt14q9y8u1gflxwz].[none:SERVICE_CODE:nk]</column>
+            <column>[federated.1iiuim80cdohbt14q9y8u1gflxwz].[none:Calculation_174584899741618184:nk]</column>
+            <column>[federated.1iiuim80cdohbt14q9y8u1gflxwz].[none:ATR_INSTANCETYPE:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-align' value='center' />
+            <format attr='vertical-align' value='center' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <lod column='[federated.1iiuim80cdohbt14q9y8u1gflxwz].[none:PRODUCT_SKU:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols>[federated.1iiuim80cdohbt14q9y8u1gflxwz].[__tableau_internal_object_id__].[cnt:PRODUCT_SKUS (MISC.PRODUCT_SKUS)_C9F4C91652ED4694A2E722EBC9315BEE:qk]</cols>
+      </table>
+      <simple-id uuid='{B9EE7CDE-EA4A-4612-B8BE-A843EE72AD83}' />
+    </worksheet>
+    <worksheet name='Sheet 3'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{68ACC9A5-2C1C-499D-8384-F345570525C8}' />
+    </worksheet>
   </worksheets>
   <windows source-height='30'>
-    <window class='worksheet' maximized='true' name='Sheet 1'>
+    <window class='worksheet' name='Sheet 1'>
       <cards>
         <edge name='left'>
           <strip size='212'>
@@ -3125,87 +3265,228 @@
       </viewpoint>
       <simple-id uuid='{3629E88F-AD0C-42BE-96E7-1D0DFAA1A679}' />
     </window>
+    <window class='worksheet' maximized='true' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='212'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='compact' param='[Parameters].[Parameter 2]' type='parameter' />
+            <card mode='compact' param='[Parameters].[Parameter 7]' type='parameter' />
+            <card mode='compact' param='[Parameters].[Parameter 1]' type='parameter' />
+            <card mode='compact' param='[Parameters].[Parameter 3]' type='parameter' />
+            <card mode='compact' param='[Parameters].[Parameter 4]' type='parameter' />
+            <card mode='compact' param='[Parameters].[Parameter 5]' type='parameter' />
+            <card mode='compact' param='[Parameters].[Parameter 6]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1iiuim80cdohbt14q9y8u1gflxwz].[none:ATR_INSTANCETYPE:nk]</field>
+            <field>[federated.1iiuim80cdohbt14q9y8u1gflxwz].[none:ATR_LOCATION:nk]</field>
+            <field>[federated.1iiuim80cdohbt14q9y8u1gflxwz].[none:Calculation_174584899741618184:nk]</field>
+            <field>[federated.1iiuim80cdohbt14q9y8u1gflxwz].[none:OFFERING_CLASS:nk]</field>
+            <field>[federated.1iiuim80cdohbt14q9y8u1gflxwz].[none:PRICING_TYPE:nk]</field>
+            <field>[federated.1iiuim80cdohbt14q9y8u1gflxwz].[none:PRODUCT_FAMILY:nk]</field>
+            <field>[federated.1iiuim80cdohbt14q9y8u1gflxwz].[none:PRODUCT_FAMILY_FROM_ATR:nk]</field>
+            <field>[federated.1iiuim80cdohbt14q9y8u1gflxwz].[none:PRODUCT_SKU:nk]</field>
+            <field>[federated.1iiuim80cdohbt14q9y8u1gflxwz].[none:PURCHASE_OPTION:nk]</field>
+            <field>[federated.1iiuim80cdohbt14q9y8u1gflxwz].[none:SERVICE_CODE:nk]</field>
+            <field>[federated.1iiuim80cdohbt14q9y8u1gflxwz].[none:SERVICE_CODE_FROM_ATR:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{2A3C7BA5-DC98-47AF-9A93-A4217F69F220}' />
+    </window>
+    <window class='worksheet' name='Sheet 3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{12ACEC3E-0FA8-4785-A92A-92B55B6EFCE5}' />
+    </window>
   </windows>
   <thumbnails>
     <thumbnail height='384' name='Sheet 1' width='384'>
       iVBORw0KGgoAAAANSUhEUgAAAYAAAAGACAYAAACkx7W/AAAACXBIWXMAAA7DAAAOwwHHb6hk
-      AAAP9klEQVR4nO3df8yVdf3H8dfhBuQGZbdwc3Pzw/HDHEiJk/wxtzJpMUmpnORatcKVm/7h
-      3Fxz5Vpby35Ybf3RP2ZUWDaKNpJV0N1SSyGSrIRSkgBj/HDeYNwCC4j7x/n+4TzFV0jt+0Vx
-      78djO9t9znWd63x2/rie51zX575Oo9lsNgNAOcNe7wEA8PoQAICiBACgKAEAKEoAAIoSAICi
-      BACgKAEAKEoAAIoSAICiBACgKAEAKEoAAIoSAICiBACgKAEAKEoAAIoSAICiBACgKAEAKEoA
-      AIoSAICiBACgKAEAKEoAAIoSAICiBACgKAEAKEoAAIoSAICiBACgKAEAKEoAAIoSAICiBACg
-      KAEAKEoAAIoSAICiBACgKAEAKEoAAIoSAICiBACgKAEAKEoAAIoSAICiBACgKAEAKEoAAIoS
-      AICiBACgKAEAKEoAAIoSAICiBACgKAEAKEoAAIoSAICiBACgKAEAKEoAAIoSAICiBACgKAEA
-      KEoAAIoSAICiBACgKAEAKEoAAIoSAICiBACgKAEAKEoAAIoSAICiBACgKAEAKEoAAIoSAICi
-      BACgKAEAKEoAAIoSAICiBACgKAEAKEoAAIoSAICiBACgKAEAKEoAAIoSAICiBACgKAEAKEoA
-      AIoSAICiBACgKAEAKEoAAIoSAICiBACgKAEAKEoAAIoSAICiBACgKAEAKEoAAIoSAICiBACg
-      KAEAKEoAAIoSAICiBACgKAEAKEoAAIoSAICiBACgKAEAKEoAAIoSAICiBACgKAEAKEoAAIoS
-      AICiBACgKAEAKEoAAIoSAICiBACgKAEAKEoAAIoSAICiBACgKAEAKEoAAIoSAICiBACgKAEA
-      KEoAAIoSAICiBACgKAEAKEoAAIoSAICiBACgKAEAKEoAAIoSAICiBACgKAEAKEoAAIoSAICi
-      BACgKAEAKEoAAIoSAICiBACgKAEAKEoAAIoSAICiBACgKAEAKEoAAIoSAICiBACgKAEAKEoA
-      AIoSAICiBACgKAEAKEoAAIoSAICiBACgKAEAKEoAAIoSAICiBACgKAEAKEoAAIoSAICiBACg
-      KAEAKEoAAIoSAICiBACgKAEAKEoAAIoSAICiBACgKAEAKEoAAIoSAICiBACgKAEAKGr46z0A
-      oJa+vr7s3bs3Y8eOTXd3dxqNxgnXGxgYSG9vbyZMmJCRI0e+ZPnevXuzY8eOnHHGGTn//PNP
-      uM6/azabaTab/3GdYcNe+pl4//79SZJx48ad8DkvjmP06NGZNWtWRowY8R9f43QiAMBrYt++
-      ffniF7+YdevWtXbE55xzTm688cZcffXVrRAMDQ3ll7/8ZZYuXZodO3bkvvvuy/nnn9/azpEj
-      R/KlL30pPT09GRoaSpKcffbZ+cxnPpO3v/3tJw3K0qVLs3Tp0pOO7yMf+UhuvfXW1v3du3dn
-      6dKl6enpyYIFC/L5z3/+uPX7+/vz5S9/OT/5yU9a45g4cWLuvPPOzJs37794h157DgEBr4nP
-      fe5zWbt2bZrNZtrb29PW1pZdu3blBz/4QWuddevW5UMf+lA+/elPZ8eOHSfczle/+tWsWbMm
-      Q0NDmTp1atrb29PX15dPfvKT2bZt20lf/8VvACe7vfjJff/+/fnCF76Q97///Vm9enUGBwdP
-      uK277747q1atytDQUDo7OzNy5Mj09vbmE5/4RJ599tn/25v1GhEA4JQ7duxYHn/88STJ9ddf
-      n1//+tf51a9+lTvuuCPjx49vrffNb34z27ZtS1tb2wm3c/DgwaxZsyZJcuutt+b+++/PypUr
-      09XVlf7+/ixbtuykh3kWL16c73//+8fdPvzhDyd54dDPwoULkySPPfZY7r///gwMDJx0HIcO
-      HcqPfvSjJMl1112XNWvWZPny5TnzzDOPW3a6EwDglBsxYkRGjRqVJJk8eXLa2toyevToLF68
-      OF/72tda640ZMyZLlizJsmXLTng8fs+ePRkYGEiSLFq0KI1GI11dXfnABz6QJPntb3970gB0
-      dnZm9uzZrdub3vSmPPLII0mSK6+8MtOnT2+tO2/evNx9992ZP3/+Cbe1adOmHD16NG1tbVmy
-      ZEmGDRuWadOm5V3veleSZMOGDa/yHXp9CABwyvX29ubcc89NkvzmN7/Jnj17smfPnjz33HMZ
-      NmxY67j917/+9dxyyy05++yzT7idM844o/X3008/3fr7ggsuSPLCJ/Pnn3/+FY3pwQcfzK5d
-      u9JoNLJkyZLWGN75znfmnnvuySWXXHLS5+7cuTNJMnbs2EyePDlJ0mg0Wucqdu/e3TovcDpz
-      Ehg45W688cbWcfHf//73ed/73pckmTFjRlasWNHa+b7cDJpp06alq6sre/fuze233946efzU
-      U0+11jl8+PBJZ+y8aGhoKN/97neTJJdeemnmzJnTWvZKZvEcPnw4yQsB+PeTzmPHjk2SDA4O
-      5p///Gfa29tfdluvJwEATrmPfexjOXjwYO6555709/fniiuuyIUXXpiOjo6Tzto5kba2ttx+
-      ++254447cujQoaxYseIl67ySne769evz17/+NUlyww03vKoxJP+KRH9//3GPv3i/0Whk+PDT
-      f/d6+o8QeMO77rrrcuTIkXznO99Jf39/3vrWt7ZOwL5a8+fPz/e+972sXr06f//739PZ2Zkj
-      R45k5cqVGT16dDo6Ov7j85vNZpYtW5Ykectb3pKLL774VY/hxRPX+/fvz9GjR1vnN5555pkk
-      L3wTEACA/Gva5OHDhzNhwoQsWLDgv97W4OBgzjvvvNx2222t+zfffHOS5KKLLmqdPD5y5Ej2
-      79+ftra2dHd3t57/+OOPZ9OmTUn+u0//SVrH+o8ePZoNGzbkHe94RwYHB7Nu3bokyZw5c/6r
-      7b7WBAA45ZYuXZrly5en0Wjk4osvfsk0yeuvvz6jRo3KD3/4wzSbzRw6dKg1m2flypXp7OxM
-      Z2dnFi9enDvvvDOHDh3KvHnzcuaZZ6anp6c1xfSDH/xgGo1Gms1m7r333nz7299Od3d3fvaz
-      nyVJ6/EkOffcc3PFFVe8ZKw9PT2t/0HYvn17kmTr1q35xje+kSR573vfmxkzZuTNb35znnzy
-      ydx1113p7e3NX/7ylzzxxBNJkmuuueb/9w08RQQAOOX+9re/JXlhB/zzn//8Jcvnz5+fMWPG
-      5Fvf+tZLpnGuWrUqSTJ79uwsXrw4g4ODefjhh/Pwww8ft94NN9yQyy67rHW/p6cnyQtTPF+0
-      ZcuWrF+/Pkny0Y9+9IRTTX/xi19k7dq1xz22ffv2VgwuueSSTJ48OZ/61Kdy8803Z9++ffnK
-      V77SWnfhwoUnDMvpSACAU27BggWZOXPmSZd3dXVl5MiRuemmm046j3/ChAlJko9//OOZOHFi
-      tm3blsOHD2fSpEm5+uqrc+mll7YOu/zpT3/Knj17MmPGjNxyyy2tbRw6dCg33XRT2tractVV
-      V53wdd797ncfNyvof5syZUqSFw4D3XfffVm+fHl27NiRUaNG5corr8x73vOeE4bldNRovtzV
-      kQDeYO66666sWrUqy5YtO+46QhzvjZEpgFfh4MGDue222+z8X4ZvAABF+QYAUJQAABRlFhBw
-      Wjh48GA2bNiQkSNH5vLLLz/pL3w99dRTmTVrVvr6+jIwMJCurq5X/Bq7d+/O2rVrM3fu3MyY
-      MSNr1qzJWWed1ZoRtGnTpmzfvj2dnZ0ZP358tmzZkiR529vels2bN6evry/XXHPNy/762BuF
-      bwDAaeHAgQOZMmVK5s6dm0cffTRbtmzJunXrMjAwkF27duV3v/tdms1mRo4cmY0bN2b9+vUZ
-      N25cNm7c2Fr2hz/8IY888kj6+/uzZ8+ePProo+nt7c2BAwfSbDbz4x//OBMmTMixY8eyYsWK
-      jBgxIlOnTm2N4aGHHsq4ceMyderUjBs3LtOmTcsDDzyQXbt2Zf369Tly5Egeeuih1/Fd+v8l
-      AMBpY+PGjVm3bl26u7vz5z//Od3d3fnjH/+Yn/70pznvvPPSaDQyc+bMbN26NVOmTElfX196
-      e3szNDSUnTt3ZsKECenv788TTzyRnp6eTJ8+PWeddVbrWj0HDhzI+vXr09HRkZ07d+bJJ5/M
-      vffem/7+/jSbzYwfPz4PPvhgHnjggUyaNCnNZjMXXXRRjh07ltmzZ+fCCy98w/za1yshAMBp
-      Y+7cuVm0aFGmTZuWAwcO5OjRoznnnHMye/bs434joKurK3PmzMnAwECef/75jBkzJu3t7Xns
-      sccyffr0DAwMZMaMGenu7s6IESNaF2br7OzMrFmzMmzYsEyaNCmXXXZZGo1GnnnmmWzevDkz
-      Z87Mtddem61bt2ZoaCirV6/OokWL0t3dnS1btmTTpk3HXVfoja7ts5/97Gdf70EANBqNtLe3
-      Z8yYMRk+fHiGDx+e5557LpMmTcqYMWOOu8pno9FIR0dHxo4dm3/84x85cOBApk+fnr6+vhw+
-      fDjTpk3L2LFj09HRkWeffTaDg4Npb2/Pvn370mw2c/jw4SxcuDAbN27M5Zdfns2bN2fSpEk5
-      evRonn766Vx77bUZNWpURowYkQsuuCAdHR0ZHBzMwMBArrrqqpP+VOQbjf8DAMrr7e3NxIkT
-      X+9hvOYEAKAo5wAAihIAgKIEAKAoAQAoSgAAihIAgKIEAKAoAQAoSgAAihIAgKIEAKAoAQAo
-      SgAAihIAgKIEAKAoAQAoSgAAihIAgKIEAKAoAQAoSgAAihIAgKIEAKAoAQAoSgAAihIAgKIE
-      AKAoAQAoSgAAihIAgKIEAKAoAQAoSgAAihIAgKIEAKAoAQAoSgAAihIAgKIEAKAoAQAoSgAA
-      ihIAgKIEAKAoAQAoSgAAihIAgKIEAKAoAQAoSgAAihIAgKIEAKAoAQAoSgAAihIAgKIEAKAo
-      AQAoSgAAihIAgKIEAKAoAQAoSgAAihIAgKIEAKAoAQAoSgAAihIAgKIEAKAoAQAoSgAAihIA
-      gKIEAKAoAQAoSgAAihIAgKIEAKAoAQAoSgAAihIAgKIEAKAoAQAoSgAAihIAgKIEAKAoAQAo
-      SgAAihIAgKIEAKAoAQAoSgAAihIAgKIEAKAoAQAoSgAAihIAgKIEAKAoAQAoSgAAihIAgKIE
-      AKAoAQAoSgAAihIAgKIEAKAoAQAoSgAAihIAgKIEAKAoAQAoSgAAihIAgKIEAKAoAQAoSgAA
-      ihIAgKIEAKAoAQAoSgAAihIAgKIEAKAoAQAoSgAAihIAgKIEAKAoAQAoSgAAihIAgKIEAKAo
-      AQAoSgAAihIAgKIEAKAoAQAoSgAAihIAgKIEAKAoAQAoSgAAihIAgKIEAKAoAQAoSgAAihIA
-      gKIEAKAoAQAoSgAAihIAgKIEAKAoAQAoSgAAihIAgKIEAKAoAQAoSgAAihIAgKIEAKAoAQAo
-      SgAAihIAgKIEAKAoAQAoSgAAihIAgKIEAKAoAQAoSgAAihIAgKL+BxmoxAyl60mFAAAAAElF
-      TkSuQmCC
+      AAASOElEQVR4nO3de8zWdf3H8dd1y9EDCol3HESTQyLmocbMTpgdTNNpLa11MmdLkUyXh2gr
+      y2zOTaGImdYsTddcrpzptNnyDAJZoAiGp6Go4A3cYvctKd6H6/cH4/qFlgtXo3g/Hht/cF1f
+      vteH64/P8/p+v5/vdTWazWYzAJTTtr0HAMD2IQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCU
+      AAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkA
+      QFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAU
+      JQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFEC
+      AFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAA
+      RQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCU
+      AAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkA
+      QFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAU
+      JQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFEC
+      AFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAA
+      RQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCU
+      AAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkA
+      QFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAU
+      JQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFEC
+      AFCUAAAUJQAARQkA8Kb19PRkw4YNaTab23sovAkCALxpy5Yty1lnnbW9h8GbNGB7DwD439PX
+      15cHH3wwd9xxR9avX58//OEPmTp1avbYY4+ttlm0aFEWLFiQjo6ODBo0KFOnTs0xxxyTgQMH
+      brW/ZcuW5eabb87TTz+dIUOGZMKECTnuuOOy7777vuEY7r///ixcuDDr1q3L4MGDc9hhh+Vj
+      H/tYBgz4/6ntpZdeyk033ZTly5en2Wxm8uTJ+eQnP5nddtttq/09/fTTuf7667Ny5crsvPPO
+      mTZtWo499tit9rWjaTQduwHboKurK+ecc06WLFmy1eODBw/Oddddl/322y8vvfRSzjjjjDzy
+      yCOv+/cHH3xwrrjiigwaNChJ8qtf/SqzZs1Kf3//Vtt98YtfzNe+9rV/OIa//vWvOf300/P4
+      44+/7rmpU6dm7ty5GTBgQFauXJkzzjgj69at22qbt7zlLZk7d24mTZqUZHOAZsyYkY0bN261
+      3VFHHZWLLroobW075smSHfN/BfzH/PSnP82SJUuy22675T3veU+GDRuW/fffP5s2bcqmTZuS
+      JBs3bsyjjz6agQMH5oMf/GCmT5+eI488Mkny0EMP5e67706SPPHEE/nBD36Q/v7+TJ48OTNn
+      zsw555yTI488MkOHDv2nY+ju7s7jjz+eQYMG5UMf+lCmT5+eadOmJUkeeOCB3H///Wk2m5kz
+      Z07WrVuXPffcM2effXa+/vWvp729PZ2dnZk9e3aSzUcSl1xySTZu3JiRI0fm/PPPz7HHHpsk
+      uf3221tj3RHtuMc2wH/En//85yTJjBkzMn78+MyaNSvXXnttli9fnvb29iRJo9HIYYcdlnPO
+      OSfjxo1Lo9FIs9nMCSeckOeeey7PPvtskuTXv/51ent7M27cuPzkJz/JzjvvnCT5zGc+84YX
+      ltva2vK+970v5513XkaPHp1Go5G+vr4ce+yxWbduXZ599tn09/fnySefTJKceeaZ+fjHP54k
+      2WuvvTJz5sw88cQTSZInn3wyK1asSJLMnDkz06ZNS19fX1auXJnly5fntttua8VrR+MIANgm
+      u+66a5LklltuaU2cjUYj73jHOzJixIgkyciRI/PDH/4w++yzTxqNRpJk6dKl6ejoSJKMHj06
+      SfKnP/0pyeZTLX/84x9zzTXX5IYbbsjq1avf8LTLqFGjMnv27IwZM6a1/8WLF6ezs7O1/7a2
+      tkyYMKH1XF9fX/r6+rJ48eIkycSJE5Mkf/nLX5IkQ4cOzWGHHZYk2WmnnfL+978/SfLII4/s
+      sKucHAEA2+SYY47JkiVLsnz58ixfvjyDBw/O9773vZx88smti7aNRqM1Mff39+eGG27I3Llz
+      09vbm3322SdHHHFEms1mVq9enSS56qqrtppkBw4cmAsvvDAf/ehH/+EY/n7/fX19+eUvf5kr
+      rrgi/f39mThxYt773vem0Wjkm9/8ZlatWpXf/va3uf/++9NoNLJ27dqMGTMm3/72t5MkL7zw
+      QpJkxIgRGTJkSOs1tkSqu7s7PT09rWsWOxJHAMA2OeGEEzJz5swMHz48SbJp06bccsst+exn
+      P5s777xzq23Xr1+fM888M5dddlk2bdqUCRMmZO7cuRkyZEh6enrS29ubZPMF5He96135wAc+
+      0Hru4osvzt/+9rc3HEtHR0emT5+eH/3oR+np6cnkyZMzZ86c1iqjwYMHZ++9906SrFu3LmvX
+      rk2SjBs3rjXZ9/T0JMnrVvts+Xuz2UxfX9+bfr/+mwkAsE0ajUY+9alP5dZbb83RRx+dAw44
+      ICNGjMirr76a2bNntyb11atX55RTTsmiRYvSaDRy4okn5uqrr259sh44cGBroj7vvPNy5ZVX
+      ZtasWbnyyiuTbF6+uWzZsn86jlWrVuVLX/pSFi9enLa2tnzuc5/LVVddlb322ivJ5iOPb33r
+      W5k3b16mTJmSX/ziF7nuuutyyCGHZMGCBfnGN76RZrOZXXbZJcnmT/p/fxTS1dWVZHMIBg8e
+      /G9+F/87CACwTdasWZNms5lBgwZl+PDhmTZtWi699NI0Go08//zzefnll9NsNvOd73wna9as
+      ybBhwzJnzpycf/75W63saTQarVNGS5cubT02ZcqU1qfv1y7L3GLL5L5u3boMHz48P/7xj3P2
+      2WdvNVF3d3dnwYIFSZLp06dnypQpmTx5cmbMmNF6zeeffz7jxo1Lsnlp6ZZTUsn/XxsYO3as
+      ZaAASXLqqafm3HPPzX333Zeurq5s3Lixtexy1113zeDBg7NixYo8+OCDSZLTTjst48ePz9q1
+      a9PR0ZGOjo50d3cnSWvp5u23396acO+8887WUcSYMWOSbF55dOGFF2bOnDlJNk/eW+4xmDFj
+      Rvbee++t9v/SSy9lp512ak3cS5YsSbPZTLPZbI2r0WhkwIABOfjggzN06ND09fXl2muvTX9/
+      f5566qnccccdSZLDDz/8P/6ebi8uAgPbpL+/P/fcc0/uueee1z130kknZeDAgVutnLn00ktz
+      2WWXbbXd5z//+Zx11lk56aSTcuONN2b9+vU55ZRTMmrUqNan8IMOOigTJ05Ms9nM9ddfn7vv
+      vrt149by5ctb+/r+97/fuiC8xZe//OV85StfybRp03LXXXflZz/7WebPn5+2trZWOKZOnZo9
+      99wzSfLpT38611xzTX7zm9/knnvuSXd3dzZt2pRhw4blxBNP/De9c/99HAEA2+Tiiy/OMccc
+      k3HjxmXAgAEZMGBAJk2alAsuuCCnn356Go1GaznmFls+fW/5s8Uee+yRyy+/PBMnTkxfX19r
+      /f6hhx6aSy65JI1GI11dXa3J+9xzz02Sf2n/jUYjF1xwQT784Q+nra0tK1asyCOPPJJGo5Fp
+      06bloosuaq0mOu200/KJT3wijUYj69evz6ZNm/LWt741s2bNal1T2BH5Kghgm22ZNmbPnp3d
+      d989p5566lafwl870b/W3y/jTNK6aWv9+vVpb2/P2972ttbzN954Yy6++OKcfPLJ+epXv9q6
+      qexf3X+z2UxnZ2dWrlyZJNlnn30ycuTI1x01NJvNrF27NqtWrcqQIUOy//77v+47i3Y0TgEB
+      22zL5Lllon3tZPqPHnsjbW1tmThxYuvmrL/3u9/9LpMmTcppp532utf9V8e65557tk73vNF2
+      7e3trbuZKxAA4E079NBD3/A7e/4dpk+fnrFjx+6QN2Jtb04BARTlIjBAUQIA/M967W8IsG1c
+      AwD+7bq7u7Nw4cIMHjw4hx9++D9dTfPoo49m0qRJefHFF9Pb25uRI0f+y6/x5JNP5tZbb82J
+      J56Ytra23HvvvZk8eXIOPPDANJvN/P73v8/LL7+coUOH5iMf+UjuuuuudHZ25vjjj8+iRYuy
+      YcOGHH300aWvLTgCAP7tXnzxxYwZMyYHHnhgFixYkMceeyzz5s1rrfV/4IEH0mw2M2DAgDz0
+      0EOZP39+hg8fnqVLl7aeW7x4ce6999709vZm9erVWbRoUdauXZuurq40m81cfvnl2XXXXdPV
+      1ZXrr78+7e3t+fnPf95aHjp69OjWT1cuWrQoK1asyMSJE/PUU09l3rx56e7uzl133bWd36nt
+      SwCA/4gHH3ww8+fPT3t7ex5++OGMHj06ixcvzs0335zx48en0Whk/PjxefTRRzN69Ohs2LAh
+      HR0d6e/vz6pVqzJy5Mj09PRk2bJlue222zJu3LjWV00kybvf/e4sXLgwa9euzYQJE3LTTTe1
+      btpqNBo58MAD88wzz+T444/P008/neeeey7XXHNNHn744ey///455JBDsmbNmu35Fm13TgEB
+      /xEHHXRQpkyZkldffTXz5s3Lxo0bM3bs2HR3d7d+OCZJ2tvbM2XKlLzwwgt54YUX0t7enqFD
+      h+a+++7LoYcems7Ozuy3334ZNWpUent7W+v/d9555xxyyCGZP39+enp6cvLJJ+fqq69OR0dH
+      NmzYkGHDhqWrqytvf/vb09HRkVdeeSXd3d1pa2vLY4891rrbt7Kdvvvd7353ew8C2LE0Go0M
+      GTIku+yySwYMGJC2trZ0dnZm1KhR2WWXXVq/JbDFHnvskd133z3d3d3p6urKvvvum87Ozmzc
+      uDH77rtvdttttwwfPjyrV69OX19fhg4dmvXr1+eZZ57JF77whRxwwAFZuHBhjjjiiCxdujTt
+      7e155ZVX8s53vjMjRozI2LFj89xzz2XYsGE57rjj0tvbm56enhx11FGv+x2AStwHAPxPajab
+      6ejoeN2n+DVr1mTUqFHbaVT/WwQAoCgXgQGKEgCAogQAoCgBAChKAACKEgCAogQAoCgBAChK
+      AACKEgCAogQAoCgBAChKAACKEgCAogQAoCgBAChKAACKEgCAogQAoCgBAChKAACKEgCAogQA
+      oCgBAChKAACKEgCAogQAoCgBAChKAACKEgCAogQAoCgBAChKAACKEgCAogQAoCgBAChKAACK
+      EgCAogQAoCgBAChKAACKEgCAogQAoCgBAChKAACKEgCAogQAoCgBAChKAACKEgCAogQAoCgB
+      AChKAACKEgCAogQAoCgBAChKAACKEgCAogQAoCgBAChKAACKEgCAogQAoCgBAChKAACKEgCA
+      ogQAoCgBAChKAACKEgCAogQAoCgBAChKAACKEgCAogQAoCgBAChKAACKEgCAogQAoCgBAChK
+      AACKEgCAogQAoCgBAChKAACKEgCAogQAoCgBAChKAACKEgCAogQAoCgBAChKAACKEgCAogQA
+      oCgBAChKAACKEgCAogQAoCgBAChKAACKEgCAogQAoCgBAChKAACKEgCAogQAoCgBAChKAACK
+      EgCAogQAoCgBAChKAACKEgCAogQAoCgBAChKAACKEgCAogQAoCgBAChKAACKEgCAogQAoCgB
+      AChKAACKEgCAogQAoCgBAChKAACKEgCAogQAoCgBAChKAACKEgCAogQAoCgBAChKAACKEgCA
+      ogQAoCgBAChKAACKEgCAogQAoCgBAChKAACKEgCAogQAoCgBAChKAACKEgCAogQAoCgBAChK
+      AACKEgCAogQAoCgBAChKAACKEgCAov4PMR7heVExo7wAAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='158' name='Sheet 2' width='384'>
+      iVBORw0KGgoAAAANSUhEUgAAAYAAAACeCAYAAAA7bN3gAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAFAUlEQVR4nO3dMWtUWRzG4X8GYWJAE4UpjFYqihDUSiyMhZ9BK638AmK7+DUES5vttVEb
+      QRsZCNosAYNIsDFFdKIhTIygs8USWdGNCbmTrLzPU+YczrlVfnPmztwZGQwGgwIgTmu3LwCA
+      3SEAAKEEACCUAACEEgCAUAIAEEoAAEIJAEAoAQAIJQAAoQQAIJQAAIQSAIBQAgAQSgAAQm07
+      AP1+v4nrAGCHOQEAhBIAgFACABBKAABC7WlikdnZ2SaWAWAHOQEAhGrkBPDHn381sQwAO8gJ
+      ACCUAACEEgCAUAIAEEoAAEIJAEAoAQAIJQAAoQQAIJQAAIQSAIBQAgAQSgAAQgkAQCgBAAgl
+      AAChBAAglAAAhBIAgFACABBKAABCCQBAKAEACCUAAKEEACDUyGAwGGxngX6/X/Pz801dDwA7
+      xAkAIFQjJ4CxsbGmrgeAHeIEABBqTxOL9Pv9JpYBYAc5AQCE2vY9AAB+T9s+AfT7fW8BAfyG
+      vAUEEEoAAEIJAEAoAQAIJQAAoQQAIJQAAIQSAIBQAgAQyqMgAEI5AQCEEgCAUAIAEEoAAEIJ
+      AEAoAQAIJQAAoQQAIJQAAIQSAIBQAgAQas8wF3/16lXNzc3V/Px8HTx4sE6cOFFTU1O1d+/e
+      YW4LwCYM7WFw9+7dq4cPH/7w98nJybp582bt379/GNsCsElDCcD9+/frwYMHNTExUVevXq2T
+      J0/W4uJiPXr0qGZmZqrT6dStW7dqdHS06a0B2KTG7wGsrq7W48ePa2xsrG7cuFGnT5+udrtd
+      R44cqevXr9eZM2dqcXGxut1u01sDsAWNB6Db7dba2lpNT0/X5OTk95u1WnXlypWqqnr69GnT
+      WwOwBY0HYGZmpqqqzp8//9PxTqdTx44dq7dv39bCwkLT2wOwSY0HoNfr1YEDB3549f9vU1NT
+      3+YCsDsaDcBgMKjl5eUaHx/fcN76+IcPH5rcHoAtaDQAKysr9eXLl19+xHPfvn1VVfXx48cm
+      twdgCxoNwNraWlVVtdvtDeetj3/69KnJ7QHYgkYDsP7KfmVlZcN56+O+DAawexoNQLvdrtHR
+      0VpeXt5w3vr4r+4VADA8jX8KaHx8vHq9Xn39+vU/57x79+7bXAB2R+MBOHz4cK2urtbs7OxP
+      xweDQT1//rxarVYdOnSo6e0B2KTGAzA9PV1VVc+ePfvp+MuXL2tpaanOnj377Z4BADuv8QCc
+      OnWqOp1OvXjxop48efLd2Pv37+vu3btVVXXx4sWmtwZgC4byNNC5ubm6fft2ff78uc6dO1fH
+      jx+vXq9X3W63lpaW6sKFC3Xt2rUaGRlpemsANmlovwfw+vXrunPnznefCGq1WnXp0qW6fPmy
+      f/4Au2xoAaj654bvwsJCvXnzpiYmJuro0aO//JIYADtjqAEA4P/Lj8IDhBIAgFACABBKAABC
+      CQBAKAEACCUAAKEEACCUAACEEgCAUAIAEEoAAEIJAEAoAQAIJQAAoQQAIJQAAIQSAIBQAgAQ
+      SgAAQgkAQCgBAAglAAChBAAglAAAhBIAgFACABBKAABCCQBAKAEACCUAAKEEACCUAACEEgCA
+      UAIAEEoAAEIJAEAoAQAIJQAAoQQAIJQAAIQSAIBQAgAQSgAAQgkAQCgBAAglAAChBAAglAAA
+      hBIAgFACABBKAABCCQBAKAEACCUAAKEEACCUAACEEgCAUAIAEEoAAEL9DT2y+zPTZOWBAAAA
+      AElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='384' name='Sheet 3' width='384'>
+      iVBORw0KGgoAAAANSUhEUgAAAYAAAAGACAYAAACkx7W/AAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAFXUlEQVR4nO3VMQEAIAzAMMC/5yFjRxMF/XpnZg4AOW87AIAdBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABR
+      BgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUA
+      AFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQ
+      ZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABR
+      BgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUA
+      AFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQ
+      ZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABR
+      BgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUA
+      AFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQ
+      ZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEfFxoG/IiMv0YAAAAASUVORK5CYII=
     </thumbnail>
   </thumbnails>
 </workbook>
