@@ -14,7 +14,7 @@ select t1.service_code
      , t4.value:appliesTo                          ::string    as applies_to
      , t4.value:unit                               ::string    as unit
      , t5.key                                      ::string    as currency
-     , t5.value                                    ::number    as price_per_unit
+     , t5.value                                    ::double    as price_per_unit
 
   from {{ref('products')}} t1
      , lateral flatten (input => t1.terms) t2
